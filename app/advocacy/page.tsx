@@ -30,7 +30,7 @@ export default function Advocacy() {
             <div className="card">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Policy Development</h3>
               <p className="text-gray-700">
-                We contribute to the development of regulatory frameworks and industry policies that affect our members' operations.
+                We contribute to the development of regulatory frameworks and industry policies that affect our members&apos; operations.
               </p>
             </div>
             <div className="card">
@@ -104,7 +104,7 @@ export default function Advocacy() {
             <div className="card">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Supplier Partnerships</h3>
               <p className="text-gray-700 mb-6">
-                If you're a software provider or service provider, explore partnership opportunities with CAFAA.
+                If you&apos;re a software provider or service provider, explore partnership opportunities with CAFAA.
               </p>
               <button className="btn-primary">Learn About Partnerships</button>
             </div>

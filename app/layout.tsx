@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CAFAA - Commercial & Asset Finance Advisers Association of Aotearoa",
   description: "CAFAA represents commercial and asset finance advisers across Aotearoa New Zealand, advancing the industry through education, advocacy, and professional development.",
+  icons: {
+    icon: "/file.svg",
+    shortcut: "/file.svg",
+    apple: "/file.svg",
+  },
 };
 
 export default function RootLayout({

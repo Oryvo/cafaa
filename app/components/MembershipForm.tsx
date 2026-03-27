@@ -38,7 +38,7 @@ export default function MembershipApplicationForm() {
         <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
           <p className="text-green-800 font-semibold mb-2">✓ Application Submitted Successfully</p>
           <p className="text-green-600">
-            Thank you for your interest in CAFAA membership. We'll review your application and be in touch within 5 business days.
+            Thank you for your interest in CAFAA membership. We&apos;ll review your application and be in touch within 5 business days.
           </p>
         </div>
       ) : (
@@ -105,7 +105,7 @@ export default function MembershipApplicationForm() {
               onChange={handleChange}
               className="form-textarea"
               rows={5}
-              placeholder="Tell us about your experience and why you'd like to join CAFAA..."
+              placeholder="Tell us about your experience and why you&apos;d like to join CAFAA..."
             />
           </div>
 

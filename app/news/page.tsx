@@ -34,7 +34,7 @@ export default function News() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">CAFAA Annual Conference 2026 - Early Bird Registration Now Open</h3>
               <p className="text-sm text-gray-500 mb-4">March 1, 2026</p>
               <p className="text-gray-700 mb-4">
-                We're excited to announce that early bird registration for our flagship Annual Conference 2026 is now open! Join us in Wellington on May 20-21 for two days of industry insights, expert panels, and valuable networking opportunities.
+                We&apos;re excited to announce that early bird registration for our flagship Annual Conference 2026 is now open! Join us in Wellington on May 20-21 for two days of industry insights, expert panels, and valuable networking opportunities.
               </p>
               <p className="text-gray-700 mb-6">
                 Early bird pricing offers a 20% discount for the first 100 registrations. Book your place today and join 500+ finance professionals for this must-attend event.
@@ -66,7 +66,7 @@ export default function News() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">CAFAA Welcomes New Board Member</h3>
                 <p className="text-sm text-gray-500 mb-4">February 15, 2026</p>
                 <p className="text-gray-700 mb-4">
-                  We're pleased to welcome Sarah Mitchell to the CAFAA board. Sarah brings 20 years of experience in commercial finance and will lead our digital transformation initiatives.
+                We&apos;re pleased to welcome Sarah Mitchell to the CAFAA board. Sarah brings 20 years of experience in commercial finance and will lead our digital transformation initiatives.
                 </p>
                 <a href="#" className="text-primary hover:text-secondary font-semibold">Read More →</a>
               </div>

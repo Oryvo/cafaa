@@ -9,10 +9,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-white">
                 CAFAA: Leading Finance Advisers in Aotearoa
               </h1>
-              <p className="text-xl text-accent mb-8">
+              <p className="text-xl mb-8" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Advancing commercial and asset finance through professional expertise, education, and advocacy across New Zealand.
               </p>
               <div className="flex gap-4">
@@ -112,7 +112,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Need More Information?</h2>
           <p className="text-xl text-accent mb-8">
-            Get in touch with our team today. We're here to help.
+            Get in touch with our team today. We&apos;re here to help.
           </p>
           <Link href="/contact" className="btn-secondary text-white border-white inline-block">
             Contact CAFAA

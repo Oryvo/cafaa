@@ -37,7 +37,7 @@ export default function ContactForm() {
         <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
           <p className="text-green-800 font-semibold mb-2">✓ Message Sent Successfully</p>
           <p className="text-green-600">
-            Thank you for your message. We'll get back to you within 24 business hours.
+            Thank you for your message. We&apos;ll get back to you within 24 business hours.
           </p>
         </div>
       ) : (

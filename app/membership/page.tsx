@@ -153,7 +153,7 @@ export default function Membership() {
           
           <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-lg p-8">
             <p className="text-gray-700 mb-8">
-              Ready to join CAFAA? Complete the form below to apply for membership. We're excited to welcome new members to our professional community. Our membership team will review your application and be in touch within 5 business days.
+              Ready to join CAFAA? Complete the form below to apply for membership. We&apos;re excited to welcome new members to our professional community. Our membership team will review your application and be in touch within 5 business days.
             </p>
             
             <MembershipForm />
@@ -248,7 +248,7 @@ export default function Membership() {
             <div className="card">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Is membership renewable?</h3>
               <p className="text-gray-700">
-                Yes, membership is annual and automatically renewable. You'll receive a renewal notice 30 days before your membership expires.
+                Yes, membership is annual and automatically renewable. You&apos;ll receive a renewal notice 30 days before your membership expires.
               </p>
             </div>
           </div>

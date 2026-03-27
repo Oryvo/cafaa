@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-accent">
-            We'd love to hear from you. Get in touch with our team.
+            We&apos;d love to hear from you. Get in touch with our team.
           </p>
         </div>
       </section>
@@ -160,7 +160,7 @@ export default function Contact() {
             <div className="card">
               <h3 className="text-lg font-bold text-gray-900 mb-2">What are your office hours?</h3>
               <p className="text-gray-700">
-                Our office is open Monday to Friday, 9:00 AM to 5:00 PM (NZDT). We're closed on public holidays.
+                Our office is open Monday to Friday, 9:00 AM to 5:00 PM (NZDT). We&apos;re closed on public holidays.
               </p>
             </div>
 

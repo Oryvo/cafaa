@@ -4,9 +4,9 @@
   /* new theme colors */
   --background: #FDFCF0; /* cream */
   --foreground: #1A1A1A; /* almost black text */
-  --primary: #0B3D2E; /* deep forest green */
-  --secondary: #2E4D44; /* muted pine */
-  --accent: #C5A059; /* soft gold/brass */
+  --primary: #7b0e21;
+  --secondary: #7b0e21;
+  --accent: #959698;
 }
 
 @theme inline {
@@ -33,10 +33,80 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Typography brand colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary) !important;
+}
+
+/* Explicit override for existing Tailwind heading text classes */
+.text-gray-900 {
+  color: var(--primary) !important;
+}
+
+/* Hero section text contrast */
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6,
+.hero p, .hero .btn-primary, .hero .btn-secondary {
+  color: white !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+}
+
+
+/* Site typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+a, .navbar-link, .btn-primary, .btn-secondary, .cta-link {
+  color: var(--foreground);
+}
+
+/* Nav / CTA */
+.navbar-link {
+  color: var(--foreground);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: white;
+  background-color: var(--primary);
+}
+
+.navbar-link.active {
+  color: white;
+  background-color: var(--primary);
+}
+
+.navbar-cta,
+.navbar-brand {
+  background-color: var(--primary);
+  color: white;
+}
+
+.navbar-cta:hover,
+.navbar-brand:hover {
+  background-color: #6b0d1d;
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
+}
+
+.hero h1, .hero h2, .hero h3, .hero p {
+  color: white !important;
+}
+
+:root {
+  --color-heading: var(--primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading) !important;
 }
 
 /* Section Spacing */
@@ -69,7 +139,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #07422a;
+  background-color: #6b0d1d;
 }
 
 .btn-secondary {
@@ -105,7 +175,7 @@ body {
 .form-select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(11, 61, 46, 0.1);
+  box-shadow: 0 0 0 3px rgba(123, 14, 33, 0.1);
 }
 
 /* Container */

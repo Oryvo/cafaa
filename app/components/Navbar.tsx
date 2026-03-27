@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 // using Heroicons for dropdown indicators and menu toggles – run
 //   npm install @heroicons/react
@@ -103,7 +104,7 @@ export default function Navbar() {
 
   // Close mobile menu on route change
   useEffect(() => {
-    setMobileMenuOpen(false);
+    setMobileMenuOpen(false); // eslint-disable-line react-hooks/set-state-in-effect
   }, [pathname]);
 
   const toggleDropdown = (label: string) => {
@@ -130,18 +131,21 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg"
-              style={{ backgroundColor: '#0B3D2E' }}
-            >
-              C
+          <Link href="/" className="flex items-center justify-center lg:justify-start flex-1 lg:flex-none gap-2 navbar-brand">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden">
+              <Image
+                src="/logo/logo.jpeg"
+                alt="CAFAA logo"
+                width={56}
+                height={56}
+                className="object-cover object-center"
+                priority
+              />
             </div>
-            <span className="font-bold text-lg text-gray-900">CAFAA</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -157,16 +161,10 @@ export default function Navbar() {
                   data-dropdown-trigger={item.submenu ? '' : undefined}
                   aria-haspopup={item.submenu ? 'true' : 'false'}
                   aria-expanded={openDropdowns[item.label] ? 'true' : 'false'}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1 ${
-                    isActive(item.href)
-                      ? 'text-white'
-                      : 'text-gray-700 hover:text-gray-900'
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1 navbar-link ${
+                    isActive(item.href) ? 'active' : ''
                   }`}
-                  style={
-                    isActive(item.href)
-                      ? { backgroundColor: '#0B3D2E' }
-                      : {}
-                  }
+                  style={isActive(item.href) ? { backgroundColor: 'var(--primary)', color: 'white' } : { color: 'var(--foreground)' }}
                 >
                   {item.label}
                   {item.submenu && (
@@ -196,10 +194,8 @@ export default function Navbar() {
                         <Link
                           href={subitem.href}
                           role="menuitem"
-                          className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
-                            isActive(subitem.href)
-                              ? 'text-white'
-                              : 'text-gray-700 hover:text-gray-900'
+                          className={`block px-4 py-2.5 text-sm font-medium transition-colors navbar-link ${
+                            isActive(subitem.href) ? 'active' : ''
                           } ${
                             isActive(subitem.href)
                               ? 'bg-opacity-10'
@@ -207,8 +203,8 @@ export default function Navbar() {
                           }`}
                           style={
                             isActive(subitem.href)
-                              ? { backgroundColor: '#0B3D2E', color: 'white' }
-                              : {}
+                              ? { backgroundColor: 'var(--primary)', color: 'white' }
+                              : { color: 'var(--foreground)' }
                           }
                         >
                           {subitem.label}
@@ -228,14 +224,14 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/members-area"
-              className="text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+              className="text-sm font-medium transition navbar-link"
+              style={{ color: 'var(--primary)' }}
             >
               Member Login
             </Link>
             <Link
               href="/membership"
-              className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90"
-              style={{ backgroundColor: '#0B3D2E' }}
+              className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90 navbar-cta"
             >
               Join CAFAA
             </Link>
@@ -258,22 +254,20 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t pt-4 space-y-1">
+          <div className="lg:hidden mt-4 pb-4 border-t pt-4 space-y-2">
             {menuStructure.map((item) => (
               <div key={item.label}>
                 {item.submenu ? (
                   <>
                     <button
                       onClick={() => toggleMobileItem(item.label)}
-                      className={`w-full text-left px-4 py-2.5 text-sm font-medium rounded-lg transition-colors flex justify-between items-center ${
-                        isActive(item.href)
-                          ? 'text-white'
-                          : 'text-gray-700 hover:text-gray-900'
+                      className={`w-full text-left px-4 py-2.5 text-sm font-medium rounded-lg transition-colors flex justify-between items-center navbar-link ${
+                        isActive(item.href) ? 'active' : ''
                       }`}
                       style={
                         isActive(item.href)
-                          ? { backgroundColor: '#0B3D2E', color: 'white' }
-                          : {}
+                          ? { backgroundColor: 'var(--primary)', color: 'white' }
+                          : { color: 'var(--foreground)' }
                       }
                       aria-expanded={expandedMobileItems[item.label] ? 'true' : 'false'}
                     >
@@ -292,15 +286,13 @@ export default function Navbar() {
                           <Link
                             key={subitem.href}
                             href={subitem.href}
-                            className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                              isActive(subitem.href)
-                                ? 'text-white'
-                                : 'text-gray-700 hover:text-gray-900'
+                            className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors navbar-link ${
+                              isActive(subitem.href) ? 'active' : ''
                             }`}
                             style={
                               isActive(subitem.href)
-                                ? { backgroundColor: '#0B3D2E', color: 'white' }
-                                : {}
+                                ? { backgroundColor: 'var(--primary)', color: 'white' }
+                                : { color: 'var(--foreground)' }
                             }
                           >
                             {subitem.label}
@@ -312,15 +304,13 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-                      isActive(item.href)
-                        ? 'text-white'
-                        : 'text-gray-700 hover:text-gray-900'
+                    className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors navbar-link ${
+                      isActive(item.href) ? 'active' : ''
                     }`}
                     style={
                       isActive(item.href)
-                        ? { backgroundColor: '#0B3D2E', color: 'white' }
-                        : {}
+                        ? { backgroundColor: 'var(--primary)', color: 'white' }
+                        : { color: 'var(--foreground)' }
                     }
                   >
                     {item.label}
@@ -339,8 +329,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/membership"
-                className="block px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90 text-center"
-                style={{ backgroundColor: '#0B3D2E' }}
+                className="block px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90 text-center navbar-cta"
               >
                 Join CAFAA
               </Link>
