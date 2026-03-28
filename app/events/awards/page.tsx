@@ -1,8 +1,12 @@
+import { Metadata } from 'next';
 import Container from '../../components/Container';
+import { siteContent } from '../../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Events Awards',
-  description: 'Information on CAFAA awards and recognitions.',
+const content = siteContent['/events/awards'];
+
+export const metadata: Metadata = {
+  title: 'Awards - CAFAA',
+  description: content.description,
 };
 
 export default function EventsAwards() {
@@ -10,28 +14,49 @@ export default function EventsAwards() {
     <div className="min-h-screen bg-white">
       <section className="hero section-padding py-20">
         <Container>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Awards</h1>
-          <p className="text-lg text-gray-700">Celebrating excellence in finance.</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{content.title}</h1>
+          <p className="text-lg text-gray-700">{content.intro}</p>
         </Container>
       </section>
-      <section className="section-padding py-10 md:py-14">
-        <Container>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700">
-            <li>Annual award categories.</li>
-            <li>Nomination process and criteria.</li>
-          </ul>
-        </Container>
-      </section>
+      
+      {content.sections.map((section, index) => (
+        <section key={index} className={`section-padding py-10 md:py-14 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}>
+          <Container>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">{section.heading}</h2>
+            
+            {section.body && <p className="text-gray-700 mb-4">{section.body}</p>}
+            
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="space-y-3 text-gray-700">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Container>
+        </section>
+      ))}
 
-      <section className="section-padding bg-gray-50 py-10 md:py-14">
-        <Container className="text-center">
-          <p className="mb-4">Want to be recognised or involved?</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/membership" className="btn-primary w-full sm:w-auto">Join CAFAA</a>
-            <a href="/contact" className="btn-secondary w-full sm:w-auto">Contact Us</a>
-          </div>
-        </Container>
-      </section>
+      {content.ctas && content.ctas.length > 0 && (
+        <section className="section-padding bg-gray-50 py-10 md:py-14">
+          <Container className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {content.ctas.map((cta, index) => (
+                <a
+                  key={index}
+                  href={cta.href}
+                  className={`px-8 py-3 rounded-lg font-semibold text-center transition ${cta.variant === 'secondary' ? 'btn-secondary' : 'btn-primary'} w-full sm:w-auto`}
+                >
+                  {cta.label}
+                </a>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </div>
   );
 }

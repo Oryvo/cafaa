@@ -1,15 +1,19 @@
+import { Metadata } from 'next';
 import Container from '../components/Container';
+import { siteContent } from '../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Member Login',
-  description: 'Access the members area (placeholder).',
+const content = siteContent['/members-area'];
+
+export const metadata: Metadata = {
+  title: 'Members Area - CAFAA',
+  description: content.description,
 };
 
 export default function MembersArea() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <Container className="max-w-md">
-        <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">Member Login</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">{content.title}</h1>
         <form className="space-y-4">
           <div>
             <label className="block mb-1 font-medium">Email</label>

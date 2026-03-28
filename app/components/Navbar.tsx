@@ -140,8 +140,8 @@ export default function Navbar() {
               <Image
                 src="/logo/logo.jpeg"
                 alt="CAFAA logo"
-                width={56}
-                height={56}
+                width={70}
+                height={70}
                 className="object-cover object-center"
                 priority
               />

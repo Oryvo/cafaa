@@ -1,116 +1,76 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { siteContent } from '../Content/siteContent';
+
+const content = siteContent['/education'];
 
 export const metadata: Metadata = {
   title: 'Education & Training - CAFAA',
-  description: 'Explore CAFAA education programs, professional development courses, and training opportunities for commercial and asset finance advisers.',
+  description: content.description,
 };
 
 export default function Education() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Hero Section */}
       <section className="hero section-padding py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Education & Training</h1>
-          <p className="text-xl text-accent">
-            Professional development programs for finance advisers
-          </p>
+          <h1 className="text-5xl font-bold mb-4">{content.title}</h1>
+          <p className="text-xl text-accent">{content.intro}</p>
         </div>
       </section>
 
-      {/* Programs */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Education Programs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Foundation Certificate</h3>
-              <p className="text-gray-700 mb-4">
-                Comprehensive introduction to commercial and asset finance advisory. Covering regulatory frameworks, industry standards, and fundamental principles.
-              </p>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>✓ Core finance principles</li>
-                <li>✓ Regulatory compliance</li>
-                <li>✓ Client relationship management</li>
-                <li>✓ Professional ethics</li>
-              </ul>
-              <button className="btn-primary">Learn More</button>
-            </div>
+      {/* Content Sections */}
+      {content.sections.map((section, index) => (
+        <section
+          key={index}
+          className={`section-padding ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
+        >
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-8">{section.heading}</h2>
 
-            <div className="card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Advanced Diploma</h3>
-              <p className="text-gray-700 mb-4">
-                Advanced training for experienced advisers. Focus on complex transactions, portfolio management, and business development strategies.
-              </p>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>✓ Complex transaction structuring</li>
-                <li>✓ Risk management</li>
-                <li>✓ Market analysis</li>
-                <li>✓ Strategic business planning</li>
-              </ul>
-              <button className="btn-primary">Learn More</button>
-            </div>
+            {section.body && (
+              <p className="text-lg text-gray-700 mb-6 max-w-3xl">{section.body}</p>
+            )}
 
-            <div className="card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Specialist Certifications</h3>
-              <p className="text-gray-700 mb-4">
-                Focused certifications in specific areas: SME financing, equipment leasing, supply chain finance, and more.
-              </p>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>✓ SME financing</li>
-                <li>✓ Equipment leasing</li>
-                <li>✓ Supply chain finance</li>
-                <li>✓ Technology & digital solutions</li>
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="space-y-3 text-lg text-gray-700 mb-6 max-w-3xl">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
               </ul>
-              <button className="btn-primary">Learn More</button>
-            </div>
+            )}
+          </div>
+        </section>
+      ))}
 
-            <div className="card">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Continuing Professional Development</h3>
-              <p className="text-gray-700 mb-4">
-                Ongoing CPD programs to maintain and update professional knowledge. Includes webinars, workshops, and industry seminars.
-              </p>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li>✓ Monthly webinars</li>
-                <li>✓ Annual workshops</li>
-                <li>✓ Industry seminars</li>
-                <li>✓ Regulatory updates</li>
-              </ul>
-              <button className="btn-primary">Learn More</button>
+      {/* CTAs */}
+      {content.ctas && content.ctas.length > 0 && (
+        <section className="section-padding bg-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {content.ctas.map((cta, index) => (
+                <Link
+                  key={index}
+                  href={cta.href}
+                  className={`px-8 py-3 rounded-lg font-semibold text-center transition ${
+                    cta.variant === 'secondary'
+                      ? 'btn-secondary'
+                      : cta.variant === 'accent'
+                      ? 'btn-accent'
+                      : 'btn-primary'
+                  }`}
+                >
+                  {cta.label}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Why Choose CAFAA Education?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">👨‍🏫</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Instructors</h3>
-              <p className="text-gray-700">
-                Learn from industry experts with extensive experience in commercial and asset finance.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎓</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Recognized Qualifications</h3>
-              <p className="text-gray-700">
-                Gain qualifications that are highly valued across the New Zealand finance industry.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Flexible Learning</h3>
-              <p className="text-gray-700">
-                Choose from online, in-person, or hybrid learning formats to suit your schedule.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

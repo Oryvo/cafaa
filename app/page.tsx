@@ -16,7 +16,7 @@ export default function Home() {
                 Advancing commercial and asset finance through professional expertise, education, and advocacy across New Zealand.
               </p>
               <div className="flex gap-4">
-                <Link href="/membership" className="btn-primary inline-block">
+                <Link href="/membership" className="btn-primary inline-block boreder-white text-white">
                   Apply for Membership
                 </Link>
                 <Link href="/contact" className="btn-secondary text-white border-white inline-block">

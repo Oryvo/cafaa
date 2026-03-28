@@ -1,49 +1,63 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
 import Container from '../../components/Container';
+import { siteContent } from '../../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Schedule of Fees',
-  description: 'Current membership fees and schedules.',
+const content = siteContent['/membership/schedule-of-fees'];
+
+export const metadata: Metadata = {
+  title: 'Schedule of Fees - CAFAA',
+  description: content.description,
 };
 
 export default function ScheduleOfFees() {
-  const fees = [
-    { type: 'Full Member', amount: '$200 pa' },
-    { type: 'Associate Member', amount: '$120 pa' },
-    { type: 'Affiliate Member', amount: '$80 pa' },
-    { type: 'Provisional Member', amount: '$100 pa' },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="hero section-padding py-20">
         <Container>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Schedule of Fees</h1>
-          <p className="text-lg text-gray-700">Annual membership fees by category.</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{content.title}</h1>
+          <p className="text-lg text-gray-700">{content.intro}</p>
         </Container>
       </section>
 
-      <section className="section-padding py-10 md:py-14">
-        <Container>
-          <div className="space-y-4">
-            {fees.map((f) => (
-              <div key={f.type} className="border rounded-lg p-4 shadow-sm">
-                <h3 className="font-semibold text-lg">{f.type}</h3>
-                <p className="text-gray-700">{f.amount}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {content.sections.map((section, index) => (
+        <section key={index} className={`section-padding py-10 md:py-14 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}>
+          <Container>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">{section.heading}</h2>
+            
+            {section.body && <p className="text-gray-700 mb-4">{section.body}</p>}
+            
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="space-y-3 text-gray-700">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Container>
+        </section>
+      ))}
 
-      <section className="section-padding bg-gray-50 py-10 md:py-14">
-        <Container className="text-center">
-          <p className="mb-4">Ready to join or renew?</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/membership" className="btn-primary w-full sm:w-auto">Apply Now</a>
-            <a href="/membership/renewal" className="btn-secondary w-full sm:w-auto">Renew Membership</a>
-          </div>
-        </Container>
-      </section>
+      {content.ctas && content.ctas.length > 0 && (
+        <section className="section-padding bg-gray-50 py-10 md:py-14">
+          <Container className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {content.ctas.map((cta, index) => (
+                <Link
+                  key={index}
+                  href={cta.href}
+                  className={`px-8 py-3 rounded-lg font-semibold text-center transition ${cta.variant === 'secondary' ? 'btn-secondary' : 'btn-primary'} w-full sm:w-auto`}
+                >
+                  {cta.label}
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </div>
   );
 }

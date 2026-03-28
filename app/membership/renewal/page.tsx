@@ -1,8 +1,12 @@
+import { Metadata } from 'next';
 import Container from '../../components/Container';
+import { siteContent } from '../../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Membership Renewal',
-  description: 'Renew your CAFAA membership quickly and easily.',
+const content = siteContent['/membership/renewal'];
+
+export const metadata: Metadata = {
+  title: 'Membership Renewal - CAFAA',
+  description: content.description,
 };
 
 export default function Renewal() {
@@ -10,8 +14,8 @@ export default function Renewal() {
     <div className="min-h-screen bg-white">
       <section className="hero section-padding py-20">
         <Container>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Membership Renewal</h1>
-          <p className="text-lg text-gray-700">Please complete the form to renew.</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{content.title}</h1>
+          <p className="text-lg text-gray-700">{content.intro}</p>
         </Container>
       </section>
 

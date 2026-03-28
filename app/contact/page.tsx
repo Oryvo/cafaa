@@ -1,192 +1,87 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
+import { siteContent } from '../Content/siteContent';
+
+const content = siteContent['/contact'];
 
 export const metadata: Metadata = {
   title: 'Contact - CAFAA',
-  description: 'Get in touch with CAFAA. Contact us with membership inquiries, education questions, events information, or any other matter.',
+  description: content.description,
 };
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Hero Section */}
       <section className="hero section-padding py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-accent">
-            We&apos;d love to hear from you. Get in touch with our team.
-          </p>
+          <h1 className="text-5xl font-bold mb-4">{content.title}</h1>
+          <p className="text-xl text-accent">{content.intro}</p>
         </div>
       </section>
 
-      {/* Contact Info & Form */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h2>
-              
-              <div className="mb-8">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">📍 Head Office</h3>
-                <p className="text-gray-700">
-                  CAFAA<br />
-                  Commercial & Asset Finance Advisers<br />
-                  Wellington, New Zealand
-                </p>
-              </div>
+      {/* Content Sections */}
+      {content.sections.map((section, index) => (
+        <section
+          key={index}
+          className={`section-padding ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
+        >
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-8">{section.heading}</h2>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">📞 Phone</h3>
-                <p className="text-gray-700">
-                  <a href="tel:+64274000000" className="text-primary hover:text-secondary">
-                    +64 2 7400 0000
-                  </a>
-                </p>
-              </div>
+            {section.body && (
+              <p className="text-lg text-gray-700 mb-6 max-w-3xl">{section.body}</p>
+            )}
 
-              <div className="mb-8">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">✉️ Email</h3>
-                <p className="text-gray-700 mb-2">
-                  <strong>General Inquiries:</strong><br />
-                  <a href="mailto:info@cafaa.nz" className="text-primary hover:text-secondary">
-                    info@cafaa.nz
-                  </a>
-                </p>
-                <p className="text-gray-700 mb-2">
-                  <strong>Membership:</strong><br />
-                  <a href="mailto:membership@cafaa.nz" className="text-primary hover:text-secondary">
-                    membership@cafaa.nz
-                  </a>
-                </p>
-                <p className="text-gray-700">
-                  <strong>Education:</strong><br />
-                  <a href="mailto:education@cafaa.nz" className="text-primary hover:text-secondary">
-                    education@cafaa.nz
-                  </a>
-                </p>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">🕐 Office Hours</h3>
-                <p className="text-gray-700">
-                  Monday - Friday: 9:00 AM - 5:00 PM (NZDT)<br />
-                  <span className="text-sm text-gray-600">Closed public holidays</span>
-                </p>
-              </div>
-
-              {/* Social Links */}
-              <div className="pt-6 border-t">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Follow Us</h3>
-                <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-secondary transition">
-                    f
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center hover:bg-primary/80 transition">
-                    𝕏
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-secondary/80 text-white rounded-full flex items-center justify-center hover:bg-secondary transition">
-                    in
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h2>
-              <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <ContactForm />
-              </div>
-            </div>
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="space-y-3 text-lg text-gray-700 mb-6 max-w-3xl">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* Departments */}
+      {/* Contact Form Section */}
       <section className="section-padding bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Departments</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Membership</h3>
-              <p className="text-gray-700 mb-4">
-                For membership applications, renewals, and member services.
-              </p>
-              <a href="mailto:membership@cafaa.nz" className="text-primary hover:text-secondary font-semibold">
-                membership@cafaa.nz
-              </a>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Education & Training</h3>
-              <p className="text-gray-700 mb-4">
-                For course registrations, training inquiries, and education programs.
-              </p>
-              <a href="mailto:education@cafaa.nz" className="text-primary hover:text-secondary font-semibold">
-                education@cafaa.nz
-              </a>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Events & Conferences</h3>
-              <p className="text-gray-700 mb-4">
-                For event registrations, sponsorship, and conference inquiries.
-              </p>
-              <a href="mailto:events@cafaa.nz" className="text-primary hover:text-secondary font-semibold">
-                events@cafaa.nz
-              </a>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Advocacy & Policy</h3>
-              <p className="text-gray-700 mb-4">
-                For advocacy matters, policy feedback, and industry concerns.
-              </p>
-              <a href="mailto:advocacy@cafaa.nz" className="text-primary hover:text-secondary font-semibold">
-                advocacy@cafaa.nz
-              </a>
-            </div>
+          <h2 className="text-4xl font-bold text-center mb-12">Send us a Message</h2>
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg border border-gray-200">
+            <ContactForm />
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-          
-          <div className="space-y-6">
-            <div className="card">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">What are your office hours?</h3>
-              <p className="text-gray-700">
-                Our office is open Monday to Friday, 9:00 AM to 5:00 PM (NZDT). We&apos;re closed on public holidays.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">How quickly will I get a response?</h3>
-              <p className="text-gray-700">
-                We aim to respond to all inquiries within 24 business hours. During busy periods, it may take up to 48 hours.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Can I call during office hours?</h3>
-              <p className="text-gray-700">
-                Yes! You can call us at +64 2 7400 0000 during office hours. However, we may be better able to help if you email us with specific details.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Do you have regional offices?</h3>
-              <p className="text-gray-700">
-                Our head office is in Wellington. We hold regional events and networking meetings in Auckland, Christchurch, and Tauranga. Contact us to find out about events near you.
-              </p>
+      {/* CTAs */}
+      {content.ctas && content.ctas.length > 0 && (
+        <section className="section-padding bg-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {content.ctas.map((cta, index) => (
+                <Link
+                  key={index}
+                  href={cta.href}
+                  className={`px-8 py-3 rounded-lg font-semibold text-center transition ${
+                    cta.variant === 'secondary'
+                      ? 'btn-secondary'
+                      : cta.variant === 'accent'
+                      ? 'btn-accent'
+                      : 'btn-primary'
+                  }`}
+                >
+                  {cta.label}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

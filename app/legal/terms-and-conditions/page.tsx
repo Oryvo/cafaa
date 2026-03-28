@@ -1,16 +1,20 @@
+import { Metadata } from 'next';
 import Container from '../../components/Container';
+import { siteContent } from '../../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Terms & Conditions',
-  description: 'Terms and conditions for using the CAFAA website.',
+const content = siteContent['/legal/terms-and-conditions'];
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions - CAFAA',
+  description: content.description,
 };
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-white">
       <Container className="py-20">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4">Terms & Conditions</h1>
-        <p className="text-gray-700">[Terms and conditions placeholder]</p>
+        <h1 className="text-2xl md:text-3xl font-bold mb-4">{content.title}</h1>
+        <p className="text-gray-700">{content.intro}</p>
       </Container>
       <section className="section-padding bg-gray-50 py-10 md:py-14">
         <Container className="text-center">

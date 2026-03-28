@@ -1,8 +1,12 @@
+import { Metadata } from 'next';
 import Container from '../../components/Container';
+import { siteContent } from '../../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Resource Exchange',
-  description: 'Submit or find shared industry resources.',
+const content = siteContent['/resources/resource-exchange'];
+
+export const metadata: Metadata = {
+  title: 'Resource Exchange - CAFAA',
+  description: content.description,
 };
 
 export default function ResourceExchange() {
@@ -10,8 +14,8 @@ export default function ResourceExchange() {
     <div className="min-h-screen bg-white">
       <section className="hero section-padding py-20">
         <Container>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Resource Exchange</h1>
-          <p className="text-lg text-gray-700">Share or search practical resources.</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{content.title}</h1>
+          <p className="text-lg text-gray-700">{content.intro}</p>
         </Container>
       </section>
       <section className="section-padding py-10 md:py-14">

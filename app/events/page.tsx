@@ -1,140 +1,76 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { siteContent } from '../Content/siteContent';
+
+const content = siteContent['/events'];
 
 export const metadata: Metadata = {
   title: 'Events - CAFAA',
-  description: 'CAFAA events, conferences, webinars, and networking opportunities for commercial and asset finance advisers.',
+  description: content.description,
 };
 
 export default function Events() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Hero Section */}
       <section className="hero section-padding py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Events & Conferences</h1>
-          <p className="text-xl text-accent">
-            Connect, learn, and network with peers across the industry
-          </p>
+          <h1 className="text-5xl font-bold mb-4">{content.title}</h1>
+          <p className="text-xl text-accent">{content.intro}</p>
         </div>
       </section>
 
-      {/* Featured Events */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="card border-l-4 border-primary">
-              <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
-                <div>
-                  <div className="text-sm text-primary font-bold uppercase mb-2">Conference</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">CAFAA Annual Conference 2026</h3>
-                  <p className="text-gray-700 mb-4">
-                    Our flagship annual conference brings together industry leaders, practitioners, and innovators for two days of premium content, networking, and professional development. Features keynote speakers, panel discussions, and industry workshops.
-                  </p>
-                  <div className="space-y-2 text-gray-600 mb-6">
-                    <p>📅 <strong>Dates:</strong> May 20-21, 2026</p>
-                    <p>📍 <strong>Location:</strong> Wellington Convention Centre, Wellington</p>
-                    <p>👥 <strong>Expected Attendance:</strong> 500+ attendees</p>
-                  </div>
-                  <button className="btn-primary">Register Now</button>
-                </div>
-              </div>
-            </div>
+      {/* Content Sections */}
+      {content.sections.map((section, index) => (
+        <section
+          key={index}
+          className={`section-padding ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
+        >
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-8">{section.heading}</h2>
 
-            <div className="card border-l-4 border-accent">
-              <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
-                <div>
-                  <div className="text-sm text-accent font-bold uppercase mb-2">Webinar Series</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Professional Development Webinars</h3>
-                  <p className="text-gray-700 mb-4">
-                    Monthly webinars covering current industry topics, regulatory updates, market trends, and best practices. Delivered online for maximum accessibility across Aotearoa.
-                  </p>
-                  <div className="space-y-2 text-gray-600 mb-6">
-                    <p>📅 <strong>Frequency:</strong> Second Thursday of each month</p>
-                    <p>🕐 <strong>Time:</strong> 12:00 PM - 1:00 PM NZDT</p>
-                    <p>💻 <strong>Format:</strong> Online via Zoom</p>
-                  </div>
-                  <button className="btn-primary">View Schedule</button>
-                </div>
-              </div>
-            </div>
+            {section.body && (
+              <p className="text-lg text-gray-700 mb-6 max-w-3xl">{section.body}</p>
+            )}
 
-            <div className="card border-l-4 border-secondary">
-              <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
-                <div>
-                  <div className="text-sm text-secondary font-bold uppercase mb-2">Regional Event</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Regional Networking Breakfasts</h3>
-                  <p className="text-gray-700 mb-4">
-                    Informal networking events across major cities. Connect with local peers, share experiences, and discuss industry developments in a relaxed setting.
-                  </p>
-                  <div className="space-y-2 text-gray-600 mb-6">
-                    <p>📍 <strong>Locations:</strong> Auckland, Wellington, Christchurch, Tauranga</p>
-                    <p>📅 <strong>Frequency:</strong> Quarterly</p>
-                    <p>🥐 <strong>Format:</strong> In-person breakfast event</p>
-                  </div>
-                  <button className="btn-primary">Find Your Region</button>
-                </div>
-              </div>
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="space-y-3 text-lg text-gray-700 mb-6 max-w-3xl">
+                {section.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="flex gap-3">
+                    <span className="text-primary font-bold flex-shrink-0">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+      ))}
+
+      {/* CTAs */}
+      {content.ctas && content.ctas.length > 0 && (
+        <section className="section-padding bg-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {content.ctas.map((cta, index) => (
+                <Link
+                  key={index}
+                  href={cta.href}
+                  className={`px-8 py-3 rounded-lg font-semibold text-center transition ${
+                    cta.variant === 'secondary'
+                      ? 'btn-secondary'
+                      : cta.variant === 'accent'
+                      ? 'btn-accent'
+                      : 'btn-primary'
+                  }`}
+                >
+                  {cta.label}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Event Types */}
-      <section className="section-padding bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Event Types</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Conferences & Summits</h3>
-              <p className="text-gray-700 mb-4">
-                Large-scale professional events featuring keynote speakers, panel discussions, workshops, and extensive networking opportunities.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Multiple track programs</li>
-                <li>✓ Industry expert speakers</li>
-                <li>✓ Dedicated networking time</li>
-              </ul>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Webinars & Training</h3>
-              <p className="text-gray-700 mb-4">
-                Online educational sessions covering regulatory updates, market trends, technical skills, and professional development topics.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Expert-led sessions</li>
-                <li>✓ Interactive Q&A</li>
-                <li>✓ Recorded for members</li>
-              </ul>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Workshops & Masterclasses</h3>
-              <p className="text-gray-700 mb-4">
-                Intensive, focused learning experiences on specific topics. Limited attendance for maximum interaction and practical application.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Small group size</li>
-                <li>✓ Hands-on learning</li>
-                <li>✓ Practical resources</li>
-              </ul>
-            </div>
-
-            <div className="card bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Networking Events</h3>
-              <p className="text-gray-700 mb-4">
-                Casual and formal networking opportunities to connect with peers, share experiences, and build professional relationships.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Regional events</li>
-                <li>✓ Social activities</li>
-                <li>✓ Business development</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

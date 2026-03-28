@@ -1,9 +1,13 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Container from '../components/Container';
+import { siteContent } from '../Content/siteContent';
 
-export const metadata = {
-  title: 'CAFAA | Member Directory',
-  description: 'Search and filter our member directory.',
+const content = siteContent['/member-directory'];
+
+export const metadata: Metadata = {
+  title: 'Member Directory - CAFAA',
+  description: content.description,
 };
 
 export default function MemberDirectory() {
@@ -11,8 +15,8 @@ export default function MemberDirectory() {
     <div className="min-h-screen bg-white">
       <section className="hero section-padding py-20">
         <Container>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Member Directory</h1>
-          <p className="text-lg text-gray-700">Browse members by category.</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{content.title}</h1>
+          <p className="text-lg text-gray-700">{content.intro}</p>
         </Container>
       </section>
 
