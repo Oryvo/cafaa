@@ -1,0 +1,774 @@
+# Query: text-gray-700
+# ContextLines: 1
+
+195 results - 46 files
+
+app\page.tsx:
+   35            <h2 className="text-4xl font-bold text-center mb-8">Our Mission</h2>
+   36:           <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-12">
+   37              CAFAA represents and advocates for commercial and asset finance advisers across Aotearoa New Zealand. We are committed to advancing professional standards, supporting industry development, and delivering value to our members and the broader financial services sector.
+
+   44                <h3 className="text-xl font-bold mb-4 text-gray-900">Professional Development</h3>
+   45:               <p className="text-gray-700">
+   46                  We provide comprehensive education programs and training opportunities to enhance the skills and knowledge of finance advisers across the industry.
+
+   51                <h3 className="text-xl font-bold mb-4 text-gray-900">Industry Advocacy</h3>
+   52:               <p className="text-gray-700">
+   53                  We advocate on behalf of our members and the broader finance sector, contributing to policy development and regulatory frameworks in New Zealand.
+
+   58                <h3 className="text-xl font-bold mb-4 text-gray-900">Standards & Ethics</h3>
+   59:               <p className="text-gray-700">
+   60                  We promote high professional standards and ethical practices across the commercial and asset finance industry in Aotearoa.
+
+   74                <h3 className="text-2xl font-bold mb-2 text-gray-900">Annual Conference 2026</h3>
+   75:               <p className="text-gray-700 mb-4">
+   76                  Join us for our flagship annual conference featuring industry experts, networking opportunities, and insightful presentations on the latest finance trends.
+
+   82                <h3 className="text-2xl font-bold mb-2 text-gray-900">Professional Development Series</h3>
+   83:               <p className="text-gray-700 mb-4">
+   84                  Monthly webinars covering essential topics for finance advisers including regulations, market trends, and business growth strategies.
+
+  100            <h2 className="text-4xl font-bold mb-6">Ready to Join CAFAA?</h2>
+  101:           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+  102              Become part of a thriving professional community. Access exclusive resources, educational programs, and networking events tailored for finance advisers.
+
+app\about\page.tsx:
+   26              <div>
+   27:               <p className="text-lg text-gray-700 mb-6">
+   28                  CAFAA was established as the premier professional association for commercial and asset finance advisers across Aotearoa New Zealand. Our organization brings together experienced professionals who are dedicated to excellence in the finance advisory sector.
+   29                </p>
+   30:               <p className="text-lg text-gray-700">
+   31                  Since our foundation, we have been instrumental in shaping the landscape of commercial finance through education, advocacy, and the promotion of professional standards.
+
+   35                <h3 className="text-2xl font-bold text-primary mb-6">Key Milestones</h3>
+   36:               <ul className="space-y-4 text-gray-700">
+   37                  <li className="flex gap-3">
+
+   66                <h3 className="text-xl font-bold mb-3 text-gray-900">Excellence</h3>
+   67:               <p className="text-gray-700">
+   68                  We pursue excellence in all aspects of our work and professional practice.
+
+   73                <h3 className="text-xl font-bold mb-3 text-gray-900">Collaboration</h3>
+   74:               <p className="text-gray-700">
+   75                  We work together to advance the interests of our members and profession.
+
+   80                <h3 className="text-xl font-bold mb-3 text-gray-900">Integrity</h3>
+   81:               <p className="text-gray-700">
+   82                  We maintain the highest ethical standards in all professional conduct.
+
+   87                <h3 className="text-xl font-bold mb-3 text-gray-900">Growth</h3>
+   88:               <p className="text-gray-700">
+   89                  We support continuous learning and professional development.
+
+  103                <h3 className="text-xl font-bold text-gray-900 mb-2">Executive Director</h3>
+  104:               <p className="text-gray-700 mb-2">Leadership Position</p>
+  105                <p className="text-sm text-gray-500">info@cafaa.nz</p>
+
+  109                <h3 className="text-xl font-bold text-gray-900 mb-2">Board Chairman</h3>
+  110:               <p className="text-gray-700 mb-2">Board Leadership</p>
+  111                <p className="text-sm text-gray-500">info@cafaa.nz</p>
+
+  115                <h3 className="text-xl font-bold text-gray-900 mb-2">Education Lead</h3>
+  116:               <p className="text-gray-700 mb-2">Professional Development</p>
+  117                <p className="text-sm text-gray-500">info@cafaa.nz</p>
+
+app\about\board-of-directors\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Board of Directors</h1>
+  15:           <p className="text-lg text-gray-700">Our governing board drives the organisation forward.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Leadership Team</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Chairperson and executive officers.</li>
+
+app\about\diversity-equity-inclusion\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Diversity, Equity & Inclusion</h1>
+  15:           <p className="text-lg text-gray-700">Fostering an inclusive finance community.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Approach</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Promoting equitable access to opportunities.</li>
+
+app\about\faq\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">FAQ</h1>
+  15:           <p className="text-lg text-gray-700">Answers to common questions.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">General Questions</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>How do I join CAFAA?</li>
+
+app\about\strategy-2024-2027\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Strategy 2024–2027</h1>
+  15:           <p className="text-lg text-gray-700">Key goals for the coming years.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Strategic Themes</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Professional development & education.</li>
+
+app\about\who-we-are\page.tsx:
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Identity</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Founded to support finance professionals.</li>
+
+app\about\women-in-finance\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Women in Finance</h1>
+  15:           <p className="text-lg text-gray-700">Empowering female advisers and leaders.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">Initiatives</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Networking events and mentorship.</li>
+
+app\about\young-professionals\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Young Professionals</h1>
+  15:           <p className="text-lg text-gray-700">Supporting the next generation in finance.</p>
+  16          </Container>
+
+  21            <h2 className="text-2xl md:text-3xl font-semibold mb-4">What We Offer</h2>
+  22:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  23              <li>Mentoring and peer networks.</li>
+
+app\advocacy\page.tsx:
+   24            <h2 className="text-4xl font-bold text-center mb-8">Our Advocacy Mission</h2>
+   25:           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
+   26              CAFAA actively advocates for the commercial and asset finance industry across Aotearoa. We work collaboratively with government agencies, regulators, and industry stakeholders to shape policy and drive positive change for our members.
+
+   31                <h3 className="text-xl font-bold text-gray-900 mb-4">Policy Development</h3>
+   32:               <p className="text-gray-700">
+   33                  We contribute to the development of regulatory frameworks and industry policies that affect our members' operations.
+
+   37                <h3 className="text-xl font-bold text-gray-900 mb-4">Stakeholder Engagement</h3>
+   38:               <p className="text-gray-700">
+   39                  We maintain strong relationships with government, regulators, and industry bodies to ensure the voice of finance advisers is heard.
+
+   43                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Representation</h3>
+   44:               <p className="text-gray-700">
+   45                  We represent the collective interests of our members in consultations and industry forums.
+
+   58                <h3 className="text-2xl font-bold text-gray-900 mb-2">Regulatory Framework Review</h3>
+   59:               <p className="text-gray-700 mb-4">
+   60                  CAFAA is actively engaged in consultations on regulatory frameworks affecting the finance advisory sector, working to ensure fair and proportionate requirements.
+
+   66                <h3 className="text-2xl font-bold text-gray-900 mb-2">Digital Finance Standards</h3>
+   67:               <p className="text-gray-700 mb-4">
+   68                  Contributing to discussions on digital transformation and cybersecurity standards for financial advisers and platforms.
+
+   74                <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional Development Standards</h3>
+   75:               <p className="text-gray-700 mb-4">
+   76                  Advocating for recognition of professional qualifications and advancing continuing professional development requirements.
+
+   82                <h3 className="text-2xl font-bold text-gray-900 mb-2">SME Financing Accessibility</h3>
+   83:               <p className="text-gray-700 mb-4">
+   84                  Working with government and financial institutions to improve access to commercial finance for small and medium-sized enterprises.
+
+   98                <h3 className="text-xl font-bold text-gray-900 mb-4">Member Consultation</h3>
+   99:               <p className="text-gray-700 mb-6">
+  100                  As a CAFAA member, you have the opportunity to provide input on advocacy positions and policy responses.
+
+  105                <h3 className="text-xl font-bold text-gray-900 mb-4">Supplier Partnerships</h3>
+  106:               <p className="text-gray-700 mb-6">
+  107                  If you're a software provider or service provider, explore partnership opportunities with CAFAA.
+
+app\components\ContactForm.tsx:
+   46              <div>
+   47:               <label className="block text-gray-700 font-semibold mb-2">Full Name *</label>
+   48                <input
+
+   58              <div>
+   59:               <label className="block text-gray-700 font-semibold mb-2">Email Address *</label>
+   60                <input
+
+   73              <div>
+   74:               <label className="block text-gray-700 font-semibold mb-2">Phone Number</label>
+   75                <input
+
+   84              <div>
+   85:               <label className="block text-gray-700 font-semibold mb-2">Subject *</label>
+   86                <select
+
+  105            <div>
+  106:             <label className="block text-gray-700 font-semibold mb-2">Message *</label>
+  107              <textarea
+
+app\components\Header.tsx:
+  24            <div className="hidden md:flex items-center gap-8">
+  25:             <Link href="/about" className="text-gray-700 hover:text-primary transition">About</Link>
+  26:             <Link href="/membership" className="text-gray-700 hover:text-primary transition">Membership</Link>
+  27:             <Link href="/education" className="text-gray-700 hover:text-primary transition">Education</Link>
+  28:             <Link href="/advocacy" className="text-gray-700 hover:text-primary transition">Advocacy</Link>
+  29:             <Link href="/events" className="text-gray-700 hover:text-primary transition">Events</Link>
+  30:             <Link href="/resources" className="text-gray-700 hover:text-primary transition">Resources</Link>
+  31:             <Link href="/news" className="text-gray-700 hover:text-primary transition">News</Link>
+  32:             <Link href="/contact" className="text-gray-700 hover:text-primary transition">Contact</Link>
+  33            </div>
+
+  49              <div className="flex flex-col gap-3">
+  50:               <Link href="/about" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">About</Link>
+  51:               <Link href="/membership" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Membership</Link>
+  52:               <Link href="/education" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Education</Link>
+  53:               <Link href="/advocacy" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Advocacy</Link>
+  54:               <Link href="/events" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Events</Link>
+  55:               <Link href="/resources" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Resources</Link>
+  56:               <Link href="/news" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">News</Link>
+  57:               <Link href="/contact" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary transition py-2">Contact</Link>
+  58              </div>
+
+app\components\MembershipForm.tsx:
+   47              <div>
+   48:               <label className="block text-gray-700 font-semibold mb-2">Full Name *</label>
+   49                <input
+
+   59              <div>
+   60:               <label className="block text-gray-700 font-semibold mb-2">Email Address *</label>
+   61                <input
+
+   74              <div>
+   75:               <label className="block text-gray-700 font-semibold mb-2">Company Name *</label>
+   76                <input
+
+   86              <div>
+   87:               <label className="block text-gray-700 font-semibold mb-2">Job Title/Role *</label>
+   88                <input
+
+  100            <div>
+  101:             <label className="block text-gray-700 font-semibold mb-2">Message / Additional Information</label>
+  102              <textarea
+
+app\components\Navbar.tsx:
+  162                        ? 'text-white'
+  163:                       : 'text-gray-700 hover:text-gray-900'
+  164                    }`}
+
+  201                                ? 'text-white'
+  202:                               : 'text-gray-700 hover:text-gray-900'
+  203                            } ${
+
+  230                href="/members-area"
+  231:               className="text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+  232              >
+
+  270                            ? 'text-white'
+  271:                           : 'text-gray-700 hover:text-gray-900'
+  272                        }`}
+
+  297                                  ? 'text-white'
+  298:                                 : 'text-gray-700 hover:text-gray-900'
+  299                              }`}
+
+  317                          ? 'text-white'
+  318:                         : 'text-gray-700 hover:text-gray-900'
+  319                      }`}
+
+  335                  href="/members-area"
+  336:                 className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition text-center"
+  337                >
+
+app\contact\page.tsx:
+   31                  <h3 className="text-lg font-bold text-gray-900 mb-2">📍 Head Office</h3>
+   32:                 <p className="text-gray-700">
+   33                    CAFAA<br />
+
+   40                  <h3 className="text-lg font-bold text-gray-900 mb-2">📞 Phone</h3>
+   41:                 <p className="text-gray-700">
+   42                    <a href="tel:+64274000000" className="text-primary hover:text-secondary">
+
+   49                  <h3 className="text-lg font-bold text-gray-900 mb-2">✉️ Email</h3>
+   50:                 <p className="text-gray-700 mb-2">
+   51                    <strong>General Inquiries:</strong><br />
+
+   55                  </p>
+   56:                 <p className="text-gray-700 mb-2">
+   57                    <strong>Membership:</strong><br />
+
+   61                  </p>
+   62:                 <p className="text-gray-700">
+   63                    <strong>Education:</strong><br />
+
+   71                  <h3 className="text-lg font-bold text-gray-900 mb-2">🕐 Office Hours</h3>
+   72:                 <p className="text-gray-700">
+   73                    Monday - Friday: 9:00 AM - 5:00 PM (NZDT)<br />
+
+  112                <h3 className="text-xl font-bold text-gray-900 mb-3">Membership</h3>
+  113:               <p className="text-gray-700 mb-4">
+  114                  For membership applications, renewals, and member services.
+
+  122                <h3 className="text-xl font-bold text-gray-900 mb-3">Education & Training</h3>
+  123:               <p className="text-gray-700 mb-4">
+  124                  For course registrations, training inquiries, and education programs.
+
+  132                <h3 className="text-xl font-bold text-gray-900 mb-3">Events & Conferences</h3>
+  133:               <p className="text-gray-700 mb-4">
+  134                  For event registrations, sponsorship, and conference inquiries.
+
+  142                <h3 className="text-xl font-bold text-gray-900 mb-3">Advocacy & Policy</h3>
+  143:               <p className="text-gray-700 mb-4">
+  144                  For advocacy matters, policy feedback, and industry concerns.
+
+  161                <h3 className="text-lg font-bold text-gray-900 mb-2">What are your office hours?</h3>
+  162:               <p className="text-gray-700">
+  163                  Our office is open Monday to Friday, 9:00 AM to 5:00 PM (NZDT). We're closed on public holidays.
+
+  168                <h3 className="text-lg font-bold text-gray-900 mb-2">How quickly will I get a response?</h3>
+  169:               <p className="text-gray-700">
+  170                  We aim to respond to all inquiries within 24 business hours. During busy periods, it may take up to 48 hours.
+
+  175                <h3 className="text-lg font-bold text-gray-900 mb-2">Can I call during office hours?</h3>
+  176:               <p className="text-gray-700">
+  177                  Yes! You can call us at +64 2 7400 0000 during office hours. However, we may be better able to help if you email us with specific details.
+
+  182                <h3 className="text-lg font-bold text-gray-900 mb-2">Do you have regional offices?</h3>
+  183:               <p className="text-gray-700">
+  184                  Our head office is in Wellington. We hold regional events and networking meetings in Auckland, Christchurch, and Tauranga. Contact us to find out about events near you.
+
+app\education\page.tsx:
+   27                <h3 className="text-2xl font-bold text-gray-900 mb-3">Foundation Certificate</h3>
+   28:               <p className="text-gray-700 mb-4">
+   29                  Comprehensive introduction to commercial and asset finance advisory. Covering regulatory frameworks, industry standards, and fundamental principles.
+   30                </p>
+   31:               <ul className="space-y-2 text-gray-700 mb-6">
+   32                  <li>✓ Core finance principles</li>
+
+   41                <h3 className="text-2xl font-bold text-gray-900 mb-3">Advanced Diploma</h3>
+   42:               <p className="text-gray-700 mb-4">
+   43                  Advanced training for experienced advisers. Focus on complex transactions, portfolio management, and business development strategies.
+   44                </p>
+   45:               <ul className="space-y-2 text-gray-700 mb-6">
+   46                  <li>✓ Complex transaction structuring</li>
+
+   55                <h3 className="text-2xl font-bold text-gray-900 mb-3">Specialist Certifications</h3>
+   56:               <p className="text-gray-700 mb-4">
+   57                  Focused certifications in specific areas: SME financing, equipment leasing, supply chain finance, and more.
+   58                </p>
+   59:               <ul className="space-y-2 text-gray-700 mb-6">
+   60                  <li>✓ SME financing</li>
+
+   69                <h3 className="text-2xl font-bold text-gray-900 mb-3">Continuing Professional Development</h3>
+   70:               <p className="text-gray-700 mb-4">
+   71                  Ongoing CPD programs to maintain and update professional knowledge. Includes webinars, workshops, and industry seminars.
+   72                </p>
+   73:               <ul className="space-y-2 text-gray-700 mb-6">
+   74                  <li>✓ Monthly webinars</li>
+
+   92                <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Instructors</h3>
+   93:               <p className="text-gray-700">
+   94                  Learn from industry experts with extensive experience in commercial and asset finance.
+
+   99                <h3 className="text-xl font-bold text-gray-900 mb-3">Recognized Qualifications</h3>
+  100:               <p className="text-gray-700">
+  101                  Gain qualifications that are highly valued across the New Zealand finance industry.
+
+  106                <h3 className="text-xl font-bold text-gray-900 mb-3">Flexible Learning</h3>
+  107:               <p className="text-gray-700">
+  108                  Choose from online, in-person, or hybrid learning formats to suit your schedule.
+
+app\education\certified-commercial-finance-professional\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Certified Commercial Finance Professional</h1>
+  15:           <p className="text-lg text-gray-700">Advanced qualification for finance advisers.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  22              <li>Comprehensive training programme.</li>
+
+app\education\cpd-platform\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">CPD Platform</h1>
+  15:           <p className="text-lg text-gray-700">Track and complete CPD requirements online.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  22              <li>Log activities and earn points.</li>
+
+app\education\diploma-financial-services\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Diploma in Financial Services</h1>
+  15:           <p className="text-lg text-gray-700">Professional development diploma.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  22              <li>Structured learning path.</li>
+
+app\events\page.tsx:
+   30                    <h3 className="text-2xl font-bold text-gray-900 mb-3">CAFAA Annual Conference 2026</h3>
+   31:                   <p className="text-gray-700 mb-4">
+   32                      Our flagship annual conference brings together industry leaders, practitioners, and innovators for two days of premium content, networking, and professional development. Features keynote speakers, panel discussions, and industry workshops.
+
+   48                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Professional Development Webinars</h3>
+   49:                   <p className="text-gray-700 mb-4">
+   50                      Monthly webinars covering current industry topics, regulatory updates, market trends, and best practices. Delivered online for maximum accessibility across Aotearoa.
+
+   66                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Regional Networking Breakfasts</h3>
+   67:                   <p className="text-gray-700 mb-4">
+   68                      Informal networking events across major cities. Connect with local peers, share experiences, and discuss industry developments in a relaxed setting.
+
+   89                <h3 className="text-xl font-bold text-gray-900 mb-4">Conferences & Summits</h3>
+   90:               <p className="text-gray-700 mb-4">
+   91                  Large-scale professional events featuring keynote speakers, panel discussions, workshops, and extensive networking opportunities.
+   92                </p>
+   93:               <ul className="space-y-2 text-gray-700">
+   94                  <li>✓ Multiple track programs</li>
+
+  101                <h3 className="text-xl font-bold text-gray-900 mb-4">Webinars & Training</h3>
+  102:               <p className="text-gray-700 mb-4">
+  103                  Online educational sessions covering regulatory updates, market trends, technical skills, and professional development topics.
+  104                </p>
+  105:               <ul className="space-y-2 text-gray-700">
+  106                  <li>✓ Expert-led sessions</li>
+
+  113                <h3 className="text-xl font-bold text-gray-900 mb-4">Workshops & Masterclasses</h3>
+  114:               <p className="text-gray-700 mb-4">
+  115                  Intensive, focused learning experiences on specific topics. Limited attendance for maximum interaction and practical application.
+  116                </p>
+  117:               <ul className="space-y-2 text-gray-700">
+  118                  <li>✓ Small group size</li>
+
+  125                <h3 className="text-xl font-bold text-gray-900 mb-4">Networking Events</h3>
+  126:               <p className="text-gray-700 mb-4">
+  127                  Casual and formal networking opportunities to connect with peers, share experiences, and build professional relationships.
+  128                </p>
+  129:               <ul className="space-y-2 text-gray-700">
+  130                  <li>✓ Regional events</li>
+
+app\events\awards\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Awards</h1>
+  14:           <p className="text-lg text-gray-700">Celebrating excellence in finance.</p>
+  15          </Container>
+
+  18          <Container>
+  19:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  20              <li>Annual award categories.</li>
+
+app\events\calendar\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Events Calendar</h1>
+  14:           <p className="text-lg text-gray-700">Calendar coming soon.</p>
+  15          </Container>
+
+  18          <Container>
+  19:           <div className="text-gray-700">[Calendar placeholder]</div>
+  20          </Container>
+
+app\events\upcoming\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Upcoming Events</h1>
+  15:           <p className="text-lg text-gray-700">Stay informed about our next events.</p>
+  16          </Container>
+
+  19          <Container>
+  20:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  21              <li>Annual Conference 2026</li>
+
+app\legal\disclaimer\page.tsx:
+  12          <h1 className="text-2xl md:text-3xl font-bold mb-4">Disclaimer</h1>
+  13:         <p className="text-gray-700">[Disclaimer text placeholder]</p>
+  14        </Container>
+
+app\legal\privacy-policy\page.tsx:
+  12          <h1 className="text-2xl md:text-3xl font-bold mb-4">Privacy Policy</h1>
+  13:         <p className="text-gray-700">[Privacy policy content placeholder]</p>
+  14        </Container>
+
+app\legal\terms-and-conditions\page.tsx:
+  12          <h1 className="text-2xl md:text-3xl font-bold mb-4">Terms & Conditions</h1>
+  13:         <p className="text-gray-700">[Terms and conditions placeholder]</p>
+  14        </Container>
+
+app\member-directory\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Member Directory</h1>
+  15:           <p className="text-lg text-gray-700">Browse members by category.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <p className="text-gray-700">[Directory list placeholder with filters]</p>
+  22          </Container>
+
+app\member-directory\affiliate-members\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Affiliate Members</h1>
+  14:           <p className="text-lg text-gray-700">Directory of affiliate members.</p>
+  15          </Container>
+
+  18          <Container>
+  19:           <p className="text-gray-700">[Affiliate members list placeholder]</p>
+  20          </Container>
+
+app\member-directory\associate-members\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Associate Members</h1>
+  14:           <p className="text-lg text-gray-700">Directory of associate members.</p>
+  15          </Container>
+
+  18          <Container>
+  19:           <p className="text-gray-700">[Associate members list placeholder]</p>
+  20          </Container>
+
+app\member-directory\full-members\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Full Members</h1>
+  14:           <p className="text-lg text-gray-700">Directory of full voting members.</p>
+  15          </Container>
+
+  18          <Container>
+  19:           <p className="text-gray-700">[Full members list placeholder]</p>
+  20          </Container>
+
+app\membership\page.tsx:
+   29                <h3 className="text-xl font-bold text-gray-900 mb-3">Finance Advisers</h3>
+   30:               <p className="text-gray-700">
+   31                  Professional advisers providing commercial and asset finance advisory services to clients across Aotearoa.
+
+   36                <h3 className="text-xl font-bold text-gray-900 mb-3">Business Owners</h3>
+   37:               <p className="text-gray-700">
+   38                  Business owners and company directors looking to enhance their professional credentials and stay current with industry trends.
+
+   43                <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Professionals</h3>
+   44:               <p className="text-gray-700">
+   45                  Professionals from finance, lending, and advisory services seeking professional development and industry connections.
+
+   66                    <h4 className="text-xl font-bold text-gray-900 mb-2">Professional Development</h4>
+   67:                   <p className="text-gray-700">
+   68                      Access to comprehensive education programs, webinars, workshops, and training courses designed to enhance your expertise and skills in commercial and asset finance.
+
+   78                    <h4 className="text-xl font-bold text-gray-900 mb-2">Industry Networking</h4>
+   79:                   <p className="text-gray-700">
+   80                      Connect with peers and industry leaders through exclusive networking events, conferences, and regional meetups. Build valuable professional relationships and business opportunities.
+
+   90                    <h4 className="text-xl font-bold text-gray-900 mb-2">Exclusive Resources</h4>
+   91:                   <p className="text-gray-700">
+   92                      Access premium resources including market reports, industry data, compliance guides, templates, tools, and best practice frameworks.
+
+  102                    <h4 className="text-xl font-bold text-gray-900 mb-2">Advocacy & Representation</h4>
+  103:                   <p className="text-gray-700">
+  104                      Have your voice heard. CAFAA advocates on behalf of members to government, regulators, and industry stakeholders, shaping policies that affect your practice.
+
+  114                    <h4 className="text-xl font-bold text-gray-900 mb-2">News & Insights</h4>
+  115:                   <p className="text-gray-700">
+  116                      Stay informed with regular news updates, industry alerts, and analysis of market trends and regulatory changes affecting commercial finance.
+
+  126                    <h4 className="text-xl font-bold text-gray-900 mb-2">Professional Credibility</h4>
+  127:                   <p className="text-gray-700">
+  128                      Enhance your professional reputation with CAFAA membership recognition. Demonstrate your commitment to professional standards and excellence.
+
+  138                    <h4 className="text-xl font-bold text-gray-900 mb-2">Member Directory</h4>
+  139:                   <p className="text-gray-700">
+  140                      Be listed in our member directory, increasing your visibility and accessibility to potential referral partners and clients.
+
+  154            <div className="max-w-2xl mx-auto bg-white border border-gray-200 rounded-lg p-8">
+  155:             <p className="text-gray-700 mb-8">
+  156                Ready to join CAFAA? Complete the form below to apply for membership. We're excited to welcome new members to our professional community. Our membership team will review your application and be in touch within 5 business days.
+
+  173                  <p className="text-2xl font-bold text-primary mb-4">$199/year</p>
+  174:                 <ul className="space-y-3 text-sm text-gray-700">
+  175                    <li>✓ Access to webinars</li>
+
+  207                  <p className="text-2xl font-bold text-primary mb-4">Custom</p>
+  208:                 <ul className="space-y-3 text-sm text-gray-700">
+  209                    <li>✓ All Professional benefits</li>
+
+  228                <h3 className="text-lg font-bold text-gray-900 mb-2">What are the membership eligibility requirements?</h3>
+  229:               <p className="text-gray-700">
+  230                  We welcome professional finance advisers, business owners, and industry professionals. You should have a genuine interest in commercial and asset finance and a commitment to professional development.
+
+  235                <h3 className="text-lg font-bold text-gray-900 mb-2">Can I cancel my membership?</h3>
+  236:               <p className="text-gray-700">
+  237                  Yes, you can cancel your membership at any time. Please contact our membership team at least 30 days before your renewal date to discuss your options.
+
+  242                <h3 className="text-lg font-bold text-gray-900 mb-2">How long does the membership review process take?</h3>
+  243:               <p className="text-gray-700">
+  244                  Our membership team typically reviews applications within 5 business days and will be in touch with you regarding your application status.
+
+  249                <h3 className="text-lg font-bold text-gray-900 mb-2">Is membership renewable?</h3>
+  250:               <p className="text-gray-700">
+  251                  Yes, membership is annual and automatically renewable. You'll receive a renewal notice 30 days before your membership expires.
+
+app\membership\compliance-requirements\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Compliance Requirements</h1>
+  15:           <p className="text-lg text-gray-700">Member obligations for ethical practice.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  22              <li>Adhere to the code of ethics.</li>
+
+app\membership\renewal\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Membership Renewal</h1>
+  14:           <p className="text-lg text-gray-700">Please complete the form to renew.</p>
+  15          </Container>
+
+app\membership\schedule-of-fees\page.tsx:
+  20            <h1 className="text-2xl md:text-3xl font-bold mb-2">Schedule of Fees</h1>
+  21:           <p className="text-lg text-gray-700">Annual membership fees by category.</p>
+  22          </Container>
+
+  30                  <h3 className="font-semibold text-lg">{f.type}</h3>
+  31:                 <p className="text-gray-700">{f.amount}</p>
+  32                </div>
+
+app\membership\types\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Membership Types</h1>
+  15:           <p className="text-lg text-gray-700">Choose the category that fits your practice.</p>
+  16          </Container>
+
+  20          <Container>
+  21:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  22              <li>Full Members</li>
+
+app\membership\types\affiliate\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Affiliate Membership</h1>
+  14:           <p className="text-lg text-gray-700">Ideal for suppliers and non-advisers wishing to engage.</p>
+  15          </Container>
+
+  19          <Container>
+  20:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  21              <li>Networking opportunities with members.</li>
+
+app\membership\types\associate\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Associate Membership</h1>
+  14:           <p className="text-lg text-gray-700">Suited to organisations or individuals not actively practising.</p>
+  15          </Container>
+
+  19          <Container>
+  20:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  21              <li>Access to resources and events.</li>
+
+app\membership\types\full\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Full Membership</h1>
+  14:           <p className="text-lg text-gray-700">For practising finance advisers meeting all criteria.</p>
+  15          </Container>
+
+  19          <Container>
+  20:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  21              <li>Voting rights and full access to resources.</li>
+
+app\membership\types\provisional\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Provisional Membership</h1>
+  14:           <p className="text-lg text-gray-700">For advisers working towards full accreditation.</p>
+  15          </Container>
+
+  19          <Container>
+  20:           <ul className="list-disc pl-5 space-y-2 text-gray-700">
+  21              <li>Entry while gaining required qualifications.</li>
+
+app\my-profile\page.tsx:
+  12          <h1 className="text-2xl md:text-3xl font-bold mb-4">My Profile</h1>
+  13:         <p className="text-gray-700">[Profile information placeholder]</p>
+  14        </Container>
+
+app\news\page.tsx:
+   35                <p className="text-sm text-gray-500 mb-4">March 1, 2026</p>
+   36:               <p className="text-gray-700 mb-4">
+   37                  We're excited to announce that early bird registration for our flagship Annual Conference 2026 is now open! Join us in Wellington on May 20-21 for two days of industry insights, expert panels, and valuable networking opportunities.
+   38                </p>
+   39:               <p className="text-gray-700 mb-6">
+   40                  Early bird pricing offers a 20% discount for the first 100 registrations. Book your place today and join 500+ finance professionals for this must-attend event.
+
+   49                  <p className="text-sm text-gray-500 mb-4">February 25, 2026</p>
+   50:                 <p className="text-gray-700 mb-4">
+   51                    The Financial Markets Authority has released updated guidelines for SME financing. CAFAA is analyzing the impact on our members and will provide detailed guidance at the next webinar.
+
+   58                  <p className="text-sm text-gray-500 mb-4">February 20, 2026</p>
+   59:                 <p className="text-gray-700 mb-4">
+   60                    Following months of advocacy work, the government has allocated $2M for finance adviser training and professional development programs. This is a major win for the industry and recognizes the importance of professional standards.
+
+   67                  <p className="text-sm text-gray-500 mb-4">February 15, 2026</p>
+   68:                 <p className="text-gray-700 mb-4">
+   69                    We're pleased to welcome Sarah Mitchell to the CAFAA board. Sarah brings 20 years of experience in commercial finance and will lead our digital transformation initiatives.
+
+   76                  <p className="text-sm text-gray-500 mb-4">February 10, 2026</p>
+   77:                 <p className="text-gray-700 mb-4">
+   78                    CAFAA has released its comprehensive Digital Finance Trends report for 2026. The report analyzes the impact of fintech, AI, and automation on the commercial finance sector.
+
+   85                  <p className="text-sm text-gray-500 mb-4">February 5, 2026</p>
+   86:                 <p className="text-gray-700 mb-4">
+   87                    Join us for our next professional development webinar on March 12, where expert panelists will discuss supply chain finance opportunities and emerging opportunities.
+
+   94                  <p className="text-sm text-gray-500 mb-4">January 30, 2026</p>
+   95:                 <p className="text-gray-700 mb-4">
+   96                    CAFAA is launching regional networking breakfasts across major cities. The first events are in Auckland and Wellington in March. Connect with peers and discuss industry developments.
+
+  108            <h2 className="text-4xl font-bold mb-6 text-gray-900">Stay Updated</h2>
+  109:           <p className="text-lg text-gray-700 mb-8">
+  110              Subscribe to our newsletter for the latest news, updates, and industry insights delivered to your inbox.
+
+app\resources\page.tsx:
+   29                <h3 className="text-2xl font-bold text-gray-900 mb-4">Guides & Manuals</h3>
+   30:               <p className="text-gray-700 mb-6">
+   31                  Comprehensive guides covering best practices, regulatory compliance, transaction structuring, and industry processes.
+   32                </p>
+   33:               <div className="space-y-2 mb-6 text-gray-700">
+   34                  <p>• Finance Advisory Best Practices</p>
+
+   44                <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry Data & Reports</h3>
+   45:               <p className="text-gray-700 mb-6">
+   46                  Market research, industry statistics, and comprehensive reports on commercial finance trends in New Zealand.
+   47                </p>
+   48:               <div className="space-y-2 mb-6 text-gray-700">
+   49                  <p>• Market Analysis Reports</p>
+
+   59                <h3 className="text-2xl font-bold text-gray-900 mb-4">Regulatory Resources</h3>
+   60:               <p className="text-gray-700 mb-6">
+   61                  Keep up-to-date with regulatory changes, policy documents, and compliance updates relevant to finance advisers.
+   62                </p>
+   63:               <div className="space-y-2 mb-6 text-gray-700">
+   64                  <p>• Regulatory Updates</p>
+
+   74                <h3 className="text-2xl font-bold text-gray-900 mb-4">Tools & Templates</h3>
+   75:               <p className="text-gray-700 mb-6">
+   76                  Ready-to-use templates, calculators, and tools to streamline your advisory practice and client management.
+   77                </p>
+   78:               <div className="space-y-2 mb-6 text-gray-700">
+   79                  <p>• Document Templates</p>
+
+   98                    <h3 className="text-xl font-bold text-gray-900 mb-2">Commercial Finance Market Report 2026</h3>
+   99:                   <p className="text-gray-700 mb-4">
+  100                      Comprehensive analysis of market trends, regulatory changes, and opportunities in the commercial and asset finance sector.
+
+  111                    <h3 className="text-xl font-bold text-gray-900 mb-2">SME Financing Best Practices Guide</h3>
+  112:                   <p className="text-gray-700 mb-4">
+  113                      Practical guide for advisers working with small and medium-sized enterprises. Covers assessment, structuring, and risk management.
+
+  124                    <h3 className="text-xl font-bold text-gray-900 mb-2">Regulatory Compliance Handbook</h3>
+  125:                   <p className="text-gray-700 mb-4">
+  126                      Up-to-date reference guide on compliance requirements, regulatory frameworks, and best practices for finance advisers.
+
+  142              <h3 className="text-2xl font-bold text-gray-900 mb-4">Members-Only Access</h3>
+  143:             <p className="text-gray-700 mb-6">
+  144                CAFAA members enjoy exclusive access to premium resources, including detailed market reports, advanced tools, and member-only webinars.
+
+  148                  <h4 className="font-bold text-gray-900 mb-3">Premium Content</h4>
+  149:                 <ul className="space-y-2 text-gray-700">
+  150                    <li>✓ Market Intelligence Reports</li>
+
+  156                  <h4 className="font-bold text-gray-900 mb-3">Priority Access</h4>
+  157:                 <ul className="space-y-2 text-gray-700">
+  158                    <li>✓ Early Event Registration</li>
+
+app\resources\agm\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Annual General Meeting</h1>
+  15:           <p className="text-lg text-gray-700">Details of the upcoming AGM.</p>
+  16          </Container>
+
+  19          <Container>
+  20:           <p className="text-gray-700">[AGM dates, agenda, minutes link etc.]</p>
+  21          </Container>
+
+app\resources\constitution\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">Constitution</h1>
+  15:           <p className="text-lg text-gray-700">Our governing document and bylaws.</p>
+  16          </Container>
+
+  19          <Container>
+  20:           <p className="text-gray-700">[Link or summary of constitution goes here]</p>
+  21          </Container>
+
+app\resources\cpd-policy\page.tsx:
+  14            <h1 className="text-2xl md:text-3xl font-bold mb-2">CPD Policy</h1>
+  15:           <p className="text-lg text-gray-700">Our standards for ongoing education.</p>
+  16          </Container>
+
+  19          <Container>
+  20:           <p className="text-gray-700">[Policy description or links]</p>
+  21          </Container>
+
+app\resources\resource-exchange\page.tsx:
+  13            <h1 className="text-2xl md:text-3xl font-bold mb-2">Resource Exchange</h1>
+  14:           <p className="text-lg text-gray-700">Share or search practical resources.</p>
+  15          </Container>

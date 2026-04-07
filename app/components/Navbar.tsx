@@ -136,12 +136,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center justify-center lg:justify-start flex-1 lg:flex-none gap-2 navbar-brand">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden">
-              <Image
+            <div className="w-full h-24 md:w-48 md:h-14 rounded-lg overflow-hidden relative">
+              <Image id='logo'
                 src="/logo/logo.jpeg"
                 alt="CAFAA logo"
-                width={70}
-                height={70}
+                  fill
                 className="object-cover object-center"
                 priority
               />

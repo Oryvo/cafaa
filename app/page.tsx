@@ -10,17 +10,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-white">
-                CAFAA: Leading Finance Advisers in Aotearoa
+                Empowering Aotearoa’s Commercial & Asset Finance Professionals
               </h1>
-              <p className="text-xl mb-8" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
-                Advancing commercial and asset finance through professional expertise, education, and advocacy across New Zealand.
+              <p className="text-2xl md:text-3xl font-semibold mb-6 text-accent">
+                The Peak Industry Body Championing Capability, Credibility, and Commercial Growth in New Zealand.
               </p>
-              <div className="flex gap-4">
-                <Link href="/membership" className="btn-primary inline-block boreder-white text-white">
-                  Apply for Membership
+              <p className="text-lg mb-8 text-gray-100 max-w-3xl" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                Welcome to the Commercial and Asset Finance Association of Aotearoa (CAFAA). We are the professional home for New Zealand’s commercial and asset finance community. In an increasingly complex financial landscape, businesses need capital to grow, and they rely on highly skilled, ethical, and connected advisers to secure it. CAFAA exists to champion those professionals. We elevate industry standards, provide world-class education, and deliver fierce advocacy to ensure our members and the Kiwi businesses they support can thrive.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/membership" className="btn-primary inline-block">
+                  Join CAFAA Today – Elevate Your Practice
                 </Link>
-                <Link href="/contact" className="btn-secondary text-white border-white inline-block">
-                  Contact Us
+                <Link href="/education" className="btn-secondary inline-block text-white border-white">
+                  Explore Our Education Pathways
                 </Link>
               </div>
             </div>
@@ -29,67 +32,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Why CAFAA Exists */}
       <section className="section-padding py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-8">Our Mission</h2>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
-            CAFAA represents and advocates for commercial and asset finance advisers across Aotearoa New Zealand. We are committed to advancing professional standards, supporting industry development, and delivering value to our members and the broader financial services sector.
-          </p>
-          
-          {/* Objectives */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card">
-              <div className="text-4xl font-bold text-primary mb-4">📚</div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Professional Development</h3>
-              <p className="text-gray-700">
-                We provide comprehensive education programs and training opportunities to enhance the skills and knowledge of finance advisers across the industry.
-              </p>
+          <h2 className="text-4xl font-bold text-center mb-8">Why CAFAA Exists</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="card bg-gray-50 p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-semibold mb-4">Uncompromising Professional Standards</h3>
+              <p className="text-gray-700">We build absolute trust in the market by holding our members to the highest ethical and operational benchmarks.</p>
             </div>
-            <div className="card">
-              <div className="text-4xl font-bold text-primary mb-4">🤝</div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Industry Advocacy</h3>
-              <p className="text-gray-700">
-                We advocate on behalf of our members and the broader finance sector, contributing to policy development and regulatory frameworks in New Zealand.
-              </p>
+            <div className="card bg-gray-50 p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-semibold mb-4">Elite Education & CPD</h3>
+              <p className="text-gray-700">We future-proof our advisers through continuous, highly relevant professional development tailored to the NZ market.</p>
             </div>
-            <div className="card">
-              <div className="text-4xl font-bold text-primary mb-4">⭐</div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Standards & Ethics</h3>
-              <p className="text-gray-700">
-                We promote high professional standards and ethical practices across the commercial and asset finance industry in Aotearoa.
-              </p>
+            <div className="card bg-gray-50 p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-semibold mb-4">Relentless Industry Advocacy</h3>
+              <p className="text-gray-700">We represent the sector’s interests in Wellington and with regulators, ensuring policy supports—rather than stifles—commercial growth.</p>
+            </div>
+            <div className="card bg-gray-50 p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-semibold mb-4">A Connected Ecosystem</h3>
+              <p className="text-gray-700">We forge a powerful, collaborative network of brokers, lenders, and service providers across Aotearoa.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Upcoming Events Teaser */}
-      <section className="section-padding bg-gray-50">
+      {/* Who We Serve */}
+      <section className="section-padding bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card bg-white">
-              <div className="text-sm text-primary font-bold uppercase mb-2">Conference</div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">Annual Conference 2026</h3>
-              <p className="text-gray-700 mb-4">
-                Join us for our flagship annual conference featuring industry experts, networking opportunities, and insightful presentations on the latest finance trends.
-              </p>
-              <p className="text-sm text-gray-500">Coming Soon</p>
+          <h2 className="text-4xl font-bold text-center mb-8">Who We Serve</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-gray-700">
+            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">Commercial & Asset Finance Advisers</h3>
+              <p>Independent professionals structuring complex debt for Kiwi enterprises.</p>
             </div>
-            <div className="card bg-white">
-              <div className="text-sm text-primary font-bold uppercase mb-2">Webinar</div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">Professional Development Series</h3>
-              <p className="text-gray-700 mb-4">
-                Monthly webinars covering essential topics for finance advisers including regulations, market trends, and business growth strategies.
-              </p>
-              <p className="text-sm text-gray-500">Monthly</p>
+            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">Brokerages & Advisory Firms</h3>
+              <p>High-performing teams seeking to elevate their market credibility.</p>
             </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/events" className="btn-primary inline-block">
-              View All Events
-            </Link>
+            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">Lenders & Financiers</h3>
+              <p>Banks and non-bank lenders looking to partner with elite, accredited intermediaries.</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">Industry Service Providers</h3>
+              <p>Legal, tech, and compliance firms that fuel the sector.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -97,12 +85,12 @@ export default function Home() {
       {/* Membership CTA */}
       <section className="section-padding py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join CAFAA?</h2>
+          <h2 className="text-4xl font-bold mb-6">Join the Peak Body for Commercial Finance</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Become part of a thriving professional community. Access exclusive resources, educational programs, and networking events tailored for finance advisers.
+            CAFAA membership signals your commitment to excellence and gives you access to the resources, credibility, and connections that matter in New Zealand’s commercial finance market.
           </p>
           <Link href="/membership" className="btn-primary inline-block">
-            Learn About Membership
+            Join CAFAA Today – Elevate Your Practice
           </Link>
         </div>
       </section>
@@ -110,9 +98,9 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="section-padding hero">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Need More Information?</h2>
+          <h2 className="text-4xl font-bold mb-6">Partner with CAFAA</h2>
           <p className="text-xl text-accent mb-8">
-            Get in touch with our team today. We&apos;re here to help.
+            Whether you are joining as a member, exploring education, or seeking industry engagement, our team is ready to help.
           </p>
           <Link href="/contact" className="btn-secondary text-white border-white inline-block">
             Contact CAFAA

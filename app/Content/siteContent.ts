@@ -20,72 +20,74 @@ export type PageContent = {
 
 export const siteContent: Record<string, PageContent> = {
   "/": {
-    title: "Leading commercial and asset finance professionals in Aotearoa",
+    title: "Empowering Aotearoa’s Commercial & Asset Finance Professionals",
     description:
-      "CAFAA supports advisers, lenders, and industry partners through education, advocacy, and professional standards across New Zealand.",
+      "CAFAA is the peak industry body championing capability, credibility, and commercial growth for commercial and asset finance professionals in New Zealand.",
     intro:
-      "CAFAA is the professional home for New Zealand’s commercial and asset finance community, championing capability, credibility, and better outcomes for clients and industry.",
+      "Welcome to the Commercial and Asset Finance Association of Aotearoa (CAFAA). We are the professional home for New Zealand’s commercial and asset finance community. In an increasingly complex financial landscape, businesses need capital to grow, and they rely on highly skilled, ethical, and connected advisers to secure it. CAFAA exists to champion those professionals. We elevate industry standards, provide world-class education, and deliver fierce advocacy to ensure our members and the Kiwi businesses they support can thrive.",
     sections: [
       {
-        heading: "What CAFAA stands for",
+        heading: "Why CAFAA Exists",
         bullets: [
-          "Professional standards that build trust in the market",
-          "Education and continuing development for advisers",
-          "Industry advocacy with regulators, policymakers, and stakeholders",
-          "A stronger, better-connected commercial finance community across Aotearoa",
+          "Uncompromising Professional Standards: We build absolute trust in the market by holding our members to the highest ethical and operational benchmarks.",
+          "Elite Education & CPD: We future-proof our advisers through continuous, highly relevant professional development tailored to the NZ market.",
+          "Relentless Industry Advocacy: We represent the sector’s interests in Wellington and with regulators, ensuring policy supports—rather than stifles—commercial growth.",
+          "A Connected Ecosystem: We forge a powerful, collaborative network of brokers, lenders, and service providers across Aotearoa.",
         ],
       },
       {
-        heading: "Who we serve",
+        heading: "Who We Serve",
+        bullets: [
+          "Commercial & Asset Finance Advisers: Independent professionals structuring complex debt for Kiwi enterprises.",
+          "Brokerages & Advisory Firms: High-performing teams seeking to elevate their market credibility.",
+          "Lenders & Financiers: Banks and non-bank lenders looking to partner with elite, accredited intermediaries.",
+          "Industry Service Providers: Legal, tech, and compliance firms that fuel the sector.",
+        ],
+      },
+      {
+        heading: "What CAFAA Delivers",
         body:
-          "Our membership includes advisers, brokers, lender representatives, and industry service providers who contribute to a healthy and professional commercial and asset finance sector.",
-      },
-      {
-        heading: "Why join",
-        bullets: [
-          "Access practical education and CPD opportunities",
-          "Connect with peers and industry leaders",
-          "Stay informed on policy, compliance, and market developments",
-          "Be part of a collective voice for the sector",
-        ],
+          "Our association delivers member value through accredited membership, capability-building education, policy influence, and high-value networking across Aotearoa.",
       },
     ],
     ctas: [
-      { label: "Join CAFAA", href: "/membership", variant: "accent" },
-      { label: "Explore education", href: "/education", variant: "secondary" },
+      { label: "Join CAFAA Today – Elevate Your Practice", href: "/membership", variant: "accent" },
+      { label: "Explore Our Education Pathways", href: "/education", variant: "secondary" },
     ],
   },
 
   "/about": {
-    title: "About CAFAA",
+    title: "About CAFAA: Advancing New Zealand’s Finance Profession",
     description:
-      "Learn about CAFAA’s purpose, role, and commitment to the commercial and asset finance profession in New Zealand.",
+      "CAFAA unites the commercial and asset finance sector to lift standards, share knowledge, and foster a sustainable financial future for Aotearoa.",
     intro:
-      "CAFAA exists to advance commercial and asset finance advice in Aotearoa through professionalism, education, advocacy, and industry leadership.",
+      "CAFAA exists to advance the commercial and asset finance advisory profession in New Zealand. We believe that when brokers and advisers are highly educated, ethically grounded, and strongly advocated for, Kiwi businesses get better access to the capital they need to innovate, scale, and employ.",
     sections: [
       {
-        heading: "Our purpose",
+        heading: "Our Mission",
         body:
-          "We bring together professionals across the sector to share knowledge, lift standards, and support a sustainable, respected profession.",
+          "CAFAA exists to advance the commercial and asset finance advisory profession in New Zealand. We believe that when brokers and advisers are highly educated, ethically grounded, and strongly advocated for, Kiwi businesses get better access to the capital they need to innovate, scale, and employ.",
       },
       {
-        heading: "Our focus",
+        heading: "Our Strategic Vision (2024–2027)",
         bullets: [
-          "Represent the interests of members and the wider industry",
-          "Support ethical, client-centred advisory practice",
-          "Provide pathways for education and capability building",
-          "Create opportunities for connection and collaboration",
+          "Lifting Industry Capability: Transitioning the sector from a transactional mindset to a highly respected advisory profession.",
+          "Recognized Education Frameworks: Establishing the gold standard for commercial finance qualifications in New Zealand.",
+          "Strengthening Sector Representation: Becoming the indispensable voice consulted by the Financial Markets Authority (FMA) and the NZ Government on all commercial lending matters.",
+          "Fostering Future Talent: Ensuring the industry is attractive to young professionals and diverse voices.",
         ],
       },
       {
-        heading: "How we work",
-        body:
-          "CAFAA is designed as a member-focused organisation with a practical, professional approach. We aim to create value through services that are useful, credible, and relevant to the New Zealand market.",
+        heading: "Diversity, Equity & Inclusion (DEI) at CAFAA",
+        bullets: [
+          "Women in Finance: CAFAA actively supports the visibility, growth, and leadership of women in NZ’s commercial finance sector through exclusive networking, mentorship programs, and leadership profiling.",
+          "Young Professionals Network: We are cultivating the next generation of finance leaders by providing clear entry pathways, peer networks, and specialized early-career CPD.",
+        ],
       },
     ],
     ctas: [
-      { label: "Who we are", href: "/about/who-we-are" },
-      { label: "Contact CAFAA", href: "/contact", variant: "secondary" },
+      { label: "Meet the Board of Directors", href: "/about/board-of-directors" },
+      { label: "Read our 2024-2027 Strategy Document", href: "/about/strategy-2024-2027", variant: "secondary" },
     ],
   },
 
@@ -323,72 +325,75 @@ export const siteContent: Record<string, PageContent> = {
   },
 
   "/advocacy": {
-    title: "Advocacy",
+    title: "Industry Advocacy & Policy",
     description:
-      "CAFAA advocates for a strong, professional, and practical commercial and asset finance environment in New Zealand.",
+      "Fierce representation for the commercial finance sector in New Zealand.",
     intro:
-      "We work to ensure the voice of the sector is heard where policy, regulation, and industry settings affect advisers, businesses, and clients.",
+      "CAFAA’s Advocacy unit is the collective political and regulatory voice of our members. We actively lobby government bodies, the Financial Markets Authority (FMA), the Commerce Commission, and major lending institutions to shape a fair, highly functional commercial finance market.",
     sections: [
       {
-        heading: "Our advocacy focus",
+        heading: "Why it matters",
+        body:
+          "Without a unified voice, the commercial finance sector risks being burdened by legislation designed for consumer lending, which stifles business growth and broker efficiency. We ensure lawmakers understand the distinct difference between commercial and consumer finance.",
+      },
+      {
+        heading: "What we deliver",
         bullets: [
-          "Industry regulation and licensing settings",
-          "Responsible commercial finance practice",
-          "Market access and competition",
-          "Practical compliance outcomes for members",
+          "Protection of Your Livelihood: We actively fight against red tape that slows down commercial deal-writing.",
+          "A Seat at the Table: We ensure the broker channel is consulted before major policy shifts occur.",
+          "Market Transparency: We push for fair market access and anti-competitive protections so brokers can offer clients the best possible lending solutions.",
         ],
       },
       {
-        heading: "How we engage",
+        heading: "How CAFAA delivers it",
         body:
-          "CAFAA contributes through submissions, stakeholder dialogue, member feedback, and constructive engagement with relevant industry and public-sector bodies.",
+          "Through deeply researched submissions to Parliament, continuous dialogue with regulators, and leveraging aggregate data supplied by our nationwide membership to prove the economic value of the broker channel.",
       },
       {
-        heading: "Member input matters",
+        heading: "Why choose CAFAA",
         body:
-          "Advocacy is strongest when it reflects real member experience. CAFAA aims to gather practical feedback from across the country and use it to inform our positions.",
+          "A single broker cannot change government policy. As a collective, CAFAA wields the economic weight of billions of dollars in commercial lending, making our voice impossible for Wellington to ignore.",
       },
     ],
     ctas: [
-      { label: "Contact advocacy team", href: "/contact" },
-      { label: "Become a member", href: "/membership", variant: "secondary" },
+      { label: "Read Our Latest Policy Submissions", href: "/contact", variant: "accent" },
+      { label: "Contact the Advocacy Team", href: "/contact", variant: "secondary" },
     ],
   },
 
   "/membership": {
-    title: "Membership",
+    title: "Membership & Accreditation",
     description:
-      "Discover the value of joining CAFAA and the membership options available to professionals across the commercial and asset finance sector.",
+      "CAFAA membership is the mark of professional excellence for commercial and asset finance professionals in New Zealand.",
     intro:
-      "Membership connects you with a professional community focused on standards, capability, advocacy, and long-term industry development.",
+      "CAFAA Membership is the premier credential for commercial and asset finance professionals in New Zealand. It is a formal recognition of your expertise, ethical standing, and commitment to the industry. We offer tiered membership pathways including Full, Associate, Affiliate, and Provisional memberships.",
     sections: [
       {
-        heading: "Why join CAFAA",
+        heading: "Who it’s for",
         bullets: [
-          "Industry representation and a collective professional voice",
-          "Education, training, and CPD opportunities",
-          "Networking with peers, lenders, and partners",
-          "Access to practical resources and updates",
+          "Full Members: Active, highly experienced commercial and asset finance advisers and brokerages.",
+          "Associate Members: Allied professionals in related financial roles seeking industry connection.",
+          "Affiliate Members: Lenders, aggregators, and service providers partnering with brokers.",
+          "Provisional Members: Emerging professionals building their experience toward full accreditation.",
         ],
       },
       {
-        heading: "Who membership suits",
-        bullets: [
-          "Commercial and asset finance advisers",
-          "Broker and advisory businesses",
-          "Lender representatives",
-          "Service providers aligned to the sector",
-        ],
-      },
-      {
-        heading: "Built for growth",
+        heading: "Why it matters",
         body:
-          "Whether you are an experienced adviser, a growing firm, or an industry partner, CAFAA membership is designed to support credibility, capability, and connection.",
+          "In a market where trust is paramount, businesses and lenders need a way to identify elite practitioners. CAFAA membership signals to the market—and to your clients—that you operate to the highest regulatory and ethical standards in New Zealand.",
+      },
+      {
+        heading: "Key benefits",
+        bullets: [
+          "The CAFAA Trust Mark: Use our accreditation to win high-value clients and secure premium lender accreditations.",
+          "Exclusive Resources: Access compliance templates, FMA guidance, and industry standard documents.",
+          "Collective Power: Benefit from a unified voice that negotiates better conditions and standards on your behalf.",
+          "Premium Networking: Unlock access to closed-door events with top-tier lenders and industry heavyweights.",
+        ],
       },
     ],
     ctas: [
-      { label: "View membership types", href: "/membership/types" },
-      { label: "Apply or enquire", href: "/contact", variant: "secondary" },
+      { label: "Compare Membership Types & Apply", href: "/membership/types", variant: "accent" },
     ],
   },
 
@@ -832,35 +837,42 @@ export const siteContent: Record<string, PageContent> = {
   },
 
   "/education": {
-    title: "Education",
+    title: "Education & CPD",
     description:
-      "Education, capability-building, and ongoing development for the commercial and asset finance profession.",
+      "Industry-leading education and capability building designed for New Zealand’s commercial and asset finance sector.",
     intro:
-      "CAFAA’s education offering is intended to help members build confidence, competence, and credibility in a changing market.",
+      "A comprehensive, specialized education ecosystem designed specifically for New Zealand’s commercial finance sector. This includes our Continuing Professional Development (CPD) platform, foundational courses, and our flagship professional designation.",
     sections: [
       {
-        heading: "Education priorities",
+        heading: "Who it’s for",
         bullets: [
-          "Foundational and advanced learning pathways",
-          "Continuing professional development",
-          "Practical industry-focused content",
-          "Training relevant to the New Zealand market",
+          "New entrants needing a structured learning pathway.",
+          "Experienced brokers needing to fulfill annual regulatory CPD requirements.",
+          "Ambitious advisers aiming for the pinnacle of industry recognition.",
         ],
       },
       {
-        heading: "Who it is for",
+        heading: "Why it matters",
         body:
-          "Education should support new entrants, experienced advisers, business leaders, and related professionals who want to stay capable and current.",
+          "The financial regulatory landscape in New Zealand is constantly shifting. Relying on outdated knowledge is a fast track to irrelevance and compliance breaches. Continuous education protects your business and enhances the strategic value you provide to your clients.",
       },
       {
-        heading: "How it can be delivered",
+        heading: "Key benefits",
+        bullets: [
+          "Certified Commercial Finance Professional (CCFP): Attain CAFAA’s flagship designation, proving your advanced technical capability in complex commercial structuring.",
+          "Tailored NZ Content: Training that reflects local legislation, the OCR, New Zealand tax structures, and local lender appetites.",
+          "Seamless CPD Tracking: An integrated platform to log your hours and easily prove compliance to regulators and aggregators.",
+        ],
+      },
+      {
+        heading: "How CAFAA delivers it",
         body:
-          "Programmes may include webinars, workshops, online modules, qualifications, and event-based learning.",
+          "Through a hybrid model of immersive in-person workshops, live-streamed masterclasses, and on-demand digital modules. Our content is designed and delivered by veteran NZ commercial brokers and legal experts.",
       },
     ],
     ctas: [
-      { label: "CPD platform", href: "/education/cpd-platform" },
-      { label: "Professional qualification", href: "/education/certified-commercial-finance-professional", variant: "secondary" },
+      { label: "Explore the CCFP Pathway", href: "/education/certified-commercial-finance-professional", variant: "accent" },
+      { label: "Log in to the CPD Platform", href: "/education/cpd-platform", variant: "secondary" },
     ],
   },
 
@@ -966,35 +978,42 @@ export const siteContent: Record<string, PageContent> = {
   },
 
   "/events": {
-    title: "Events",
+    title: "Events, Networking & Awards",
     description:
-      "Conferences, webinars, networking, and professional events for CAFAA members and the wider industry.",
+      "Connecting Aotearoa’s finance ecosystem through targeted events, networking, and excellence recognition.",
     intro:
-      "CAFAA events are designed to bring the profession together, create practical learning opportunities, and support meaningful industry connection.",
+      "A premier calendar of regional and national events, ranging from intimate technical workshops to our flagship Annual Commercial Finance Summit and Excellence Awards.",
     sections: [
       {
-        heading: "What to expect",
+        heading: "Why it matters",
+        body:
+          "Commercial finance is a relationship business. Who you know at a lending institution can be the difference between a declined application and a funded deal. Our events bridge the gap between advisers and capital providers.",
+      },
+      {
+        heading: "Who it’s for",
         bullets: [
-          "Annual flagship events",
-          "Regional networking and member gatherings",
-          "Webinars and focused development sessions",
-          "Awards and recognition programmes",
+          "Members looking to build strategic relationships with lender Business Development Managers (BDMs).",
+          "Professionals seeking to learn from peer success and market insight.",
+          "Firms wanting to raise their profile within the commercial finance ecosystem.",
         ],
       },
       {
-        heading: "Why events matter",
-        body:
-          "Good events strengthen community, surface ideas, and help advisers and industry participants stay engaged with what matters.",
+        heading: "What CAFAA offers",
+        bullets: [
+          "Direct Lender Access: Meet the decision-makers from major banks and niche non-bank lenders.",
+          "Peer-to-Peer Learning: Discover how top-performing Kiwi brokers are structuring deals and scaling their firms.",
+          "Brand Visibility: Nominate your firm for the CAFAA Excellence Awards to build massive credibility in the marketplace.",
+        ],
       },
       {
-        heading: "For launch",
+        heading: "How we deliver it",
         body:
-          "This page can promote a simple event calendar and highlight any upcoming programmes while CAFAA’s event schedule grows.",
+          "We host regular regional networking breakfasts, quarterly economic briefing webinars, and an annual gala that serves as the premier night on the NZ commercial finance calendar.",
       },
     ],
     ctas: [
-      { label: "Upcoming events", href: "/events/upcoming" },
-      { label: "Awards", href: "/events/awards", variant: "secondary" },
+      { label: "View the Events Calendar", href: "/events/calendar", variant: "accent" },
+      { label: "Register for the Annual Summit", href: "/events/upcoming", variant: "secondary" },
     ],
   },
 
@@ -1092,35 +1111,28 @@ export const siteContent: Record<string, PageContent> = {
   },
 
   "/resources": {
-    title: "Resources",
+    title: "Member Resource Exchange",
     description:
-      "Practical guidance, policy documents, governance materials, and tools for members and stakeholders.",
+      "Your toolkit for operational excellence and compliance.",
     intro:
-      "The resources section is where CAFAA can house its most useful reference material for members and the wider industry.",
+      "Operating a compliant, highly efficient commercial finance brokerage in New Zealand requires airtight documentation. The CAFAA Resource Exchange is an exclusive library of practical tools, policy documents, and governance materials designed to save you time and protect your business.",
     sections: [
       {
-        heading: "Resource categories",
+        heading: "What You Will Find",
         bullets: [
-          "Governance documents",
-          "Policies and member guidance",
-          "Templates and practical tools",
-          "Industry updates and reference materials",
+          "Compliance Templates: Ready-to-use disclosure statements, privacy waivers, and scope of engagement templates aligned with current FMA expectations.",
+          "Practice Guides: Step-by-step frameworks for structuring complex asset finance deals, writing credit papers, and managing client data.",
+          "Industry Briefings: Summaries of recent changes to the Financial Services Legislation Amendment Act (FSLAA) and how they specifically apply to commercial brokers.",
         ],
       },
       {
-        heading: "Launch approach",
+        heading: "The CAFAA Standard",
         body:
-          "At launch, keep this section focused on core documents and a small number of practical resources. It can expand over time as the association grows.",
-      },
-      {
-        heading: "Member value",
-        body:
-          "Useful resources help members save time, stay aligned, and access consistent information from a central place.",
+          "Every document in the Resource Exchange is vetted by our technical committee. By using CAFAA-approved templates, you reduce your operational friction and ensure your firm is always aligned with New Zealand’s highest regulatory standards.",
       },
     ],
     ctas: [
-      { label: "Constitution", href: "/resources/constitution" },
-      { label: "CPD policy", href: "/resources/cpd-policy", variant: "secondary" },
+      { label: "Access the Resource Exchange (Members Only)", href: "/resources/resource-exchange", variant: "accent" },
     ],
   },
 
@@ -1265,35 +1277,34 @@ export const siteContent: Record<string, PageContent> = {
   },
 
   "/contact": {
-    title: "Contact us",
+    title: "Get in Touch with CAFAA",
     description:
-      "Get in touch with CAFAA for membership, education, events, advocacy, or general enquiries.",
+      "Partner with the peak body for commercial finance in New Zealand.",
     intro:
-      "Whether you are interested in joining, partnering, or learning more about the association, we would be glad to hear from you.",
+      "Whether you are an adviser ready to elevate your career through membership, a lender looking to partner with our network, or a media representative seeking industry commentary, the CAFAA team is ready to assist.",
     sections: [
       {
-        heading: "How we can help",
+        heading: "How We Can Help You",
         bullets: [
-          "Membership enquiries and renewals",
-          "Education and CPD questions",
-          "Events, sponsorship, and partnerships",
-          "Advocacy and industry matters",
+          "Membership & Renewals: Fast-track your application or understand which tier suits you best.",
+          "Education & CPD: Enquiries regarding CCFP enrollment, cross-credits, or platform access.",
+          "Advocacy & Feedback: Report a systemic market issue or contribute to our next government submission.",
+          "Sponsorship & Events: Connect your brand with New Zealand's top commercial finance originators.",
         ],
       },
       {
-        heading: "Best way to reach us",
+        heading: "Contact Information",
         body:
-          "Use the contact form for the quickest route to the right team, especially if your enquiry relates to membership, education, or partnerships.",
+          "Email: info@cafaa.co.nz (placeholder); Phone: +64 X XXX XXXX (placeholder); Office: Auckland, New Zealand (placeholder).",
       },
       {
-        heading: "For launch",
+        heading: "Enquiry Form",
         body:
-          "Keep placeholder contact details clear and simple until official office and phone details are finalised.",
+          "Use the form below to send your enquiry, selecting the type that best matches your request.",
       },
     ],
     ctas: [
-      { label: "Join CAFAA", href: "/membership" },
-      { label: "Explore resources", href: "/resources", variant: "secondary" },
+      { label: "Submit Enquiry", href: "/contact", variant: "accent" },
     ],
   },
 
@@ -1302,7 +1313,7 @@ export const siteContent: Record<string, PageContent> = {
     description:
       "How CAFAA collects, uses, stores, and protects personal information.",
     intro:
-      "This page should clearly explain how personal information is handled in connection with membership, events, website use, and enquiries.",
+      "CAFAA is committed to protecting member and website user data in line with New Zealand’s Privacy Act 2020 and best practice data handling standards.",
     sections: [
       {
         heading: "Key areas to cover",
@@ -1330,7 +1341,7 @@ export const siteContent: Record<string, PageContent> = {
     description:
       "Important information about the general nature of content published by CAFAA.",
     intro:
-      "This page should explain that website content is general in nature and not a substitute for specific legal, financial, or professional advice.",
+      "Content is for professional development and general information, not a substitute for specific legal, financial, or professional advice.",
     sections: [
       {
         heading: "Key points",
@@ -1357,7 +1368,7 @@ export const siteContent: Record<string, PageContent> = {
     description:
       "Website terms, acceptable use, and general conditions relevant to CAFAA’s online presence.",
     intro:
-      "This page should set out the basic terms governing use of the CAFAA website, forms, and resources.",
+      "These terms govern the acceptable use of CAFAA IP, the member portal, and directory representation.",
     sections: [
       {
         heading: "What to include",
