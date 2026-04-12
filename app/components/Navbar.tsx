@@ -1,12 +1,9 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-// using Heroicons for dropdown indicators and menu toggles – run
-//   npm install @heroicons/react
-// if you haven't added the package yet
 import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 interface MenuItem {
@@ -24,7 +21,7 @@ const menuStructure: MenuItem[] = [
       { label: 'About Us', href: '/about' },
       { label: 'Who We Are', href: '/about/who-we-are' },
       { label: 'Board of Directors', href: '/about/board-of-directors' },
-      { label: 'Strategy 2024-2027', href: '/about/strategy-2024-2027' },
+      { label: 'Strategy 2024–2027', href: '/about/strategy-2024-2027' },
       { label: 'Diversity, Equity & Inclusion', href: '/about/diversity-equity-inclusion' },
       { label: 'Women in Finance', href: '/about/women-in-finance' },
       { label: 'Young Professionals', href: '/about/young-professionals' },
@@ -78,140 +75,112 @@ const menuStructure: MenuItem[] = [
   { label: 'Contact', href: '/contact' },
 ];
 
+const activeStyle = { backgroundColor: 'var(--primary)', color: '#fff' };
+
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdowns, setOpenDropdowns] = useState<{ [key: string]: boolean }>({});
-  const [expandedMobileItems, setExpandedMobileItems] = useState<{ [key: string]: boolean }>({});
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [expandedMobileItems, setExpandedMobileItems] = useState<Record<string, boolean>>({});
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
-  // Close dropdowns on outside click
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      const target = e.target as HTMLElement;
-      if (!target.closest('[data-dropdown-trigger]') && !target.closest('[data-dropdown-menu]')) {
-        setOpenDropdowns({});
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false); // eslint-disable-line react-hooks/set-state-in-effect
+    setMobileMenuOpen(false);
+    setOpenDropdown(null);
+    setExpandedMobileItems({});
   }, [pathname]);
 
-  const toggleDropdown = (label: string) => {
-    setOpenDropdowns((prev) => ({
-      ...prev,
-      [label]: !prev[label],
-    }));
-  };
-
-  const toggleMobileItem = (label: string) => {
-    setExpandedMobileItems((prev) => ({
-      ...prev,
-      [label]: !prev[label],
-    }));
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent, label: string) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleDropdown(label);
-    } else if (e.key === 'Escape') {
-      setOpenDropdowns({});
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (!(e.target as HTMLElement).closest('[data-nav-item]')) {
+        setOpenDropdown(null);
+      }
     }
-  };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b shadow-sm" style={{ borderColor: 'var(--border)' }}>
+      <nav className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between gap-4">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center justify-center lg:justify-start flex-1 lg:flex-none gap-2 navbar-brand">
-            <div className="w-full h-24 md:w-48 md:h-14 rounded-lg overflow-hidden relative">
-              <Image id='logo'
+          <Link href="/" className="shrink-0 flex items-center">
+            <div className="relative w-36 h-11 md:w-44 md:h-14">
+              <Image
+                id="logo"
                 src="/logo/logo.jpeg"
-                alt="CAFAA logo"
-                  fill
-                className="object-cover object-center"
+                alt="CAFAA — Commercial & Asset Finance Advisers Association of Aotearoa"
+                fill
+                className="object-contain object-left"
                 priority
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-0.5">
             {menuStructure.map((item) => (
-              <div key={item.label} className="relative group">
-                <button
-                  onClick={() => item.submenu && toggleDropdown(item.label)}
-                  onKeyDown={(e) => item.submenu && handleKeyDown(e, item.label)}
-                  onMouseEnter={() =>
-                    item.submenu && setOpenDropdowns({ [item.label]: true })
-                  }
-                  data-dropdown-trigger={item.submenu ? '' : undefined}
-                  aria-haspopup={item.submenu ? 'true' : 'false'}
-                  aria-expanded={openDropdowns[item.label] ? 'true' : 'false'}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1 navbar-link ${
-                    isActive(item.href) ? 'active' : ''
-                  }`}
-                  style={isActive(item.href) ? { backgroundColor: 'var(--primary)', color: 'white' } : { color: 'var(--foreground)' }}
-                >
-                  {item.label}
-                  {item.submenu && (
-                    <ChevronDownIcon
-                      className={`w-4 h-4 transition-transform ${
-                        openDropdowns[item.label] ? 'rotate-180' : ''
-                      } group-hover:rotate-180`}
-                    />
-                  )}
-                </button>
-
-                {/* Dropdown Menu - visibility is controlled by state OR hover (group-hover) */}
-                {item.submenu && (
-                  <div
-                    ref={(el) => {
-                      if (el) dropdownRefs.current[item.label] = el;
-                    }}
-                    data-dropdown-menu
-                    role="menu"
-                    className={`absolute left-0 mt-0 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50 ${
-                      openDropdowns[item.label] ? '' : 'hidden'
-                    } group-hover:block`}
-                    style={{ top: '100%' }}
+              <div
+                key={item.label}
+                data-nav-item
+                className="relative"
+                onMouseEnter={() => item.submenu && setOpenDropdown(item.label)}
+                onMouseLeave={() => item.submenu && setOpenDropdown(null)}
+              >
+                {/* Items WITH submenu render as buttons; items WITHOUT render as Links */}
+                {item.submenu ? (
+                  <button
+                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                    aria-haspopup="true"
+                    aria-expanded={openDropdown === item.label}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1 navbar-link ${
+                      isActive(item.href) ? 'active' : ''
+                    }`}
+                    style={isActive(item.href) ? activeStyle : undefined}
                   >
-                    {item.submenu.map((subitem, idx) => (
-                      <div key={subitem.href}>
-                        <Link
-                          href={subitem.href}
-                          role="menuitem"
-                          className={`block px-4 py-2.5 text-sm font-medium transition-colors navbar-link ${
-                            isActive(subitem.href) ? 'active' : ''
-                          } ${
-                            isActive(subitem.href)
-                              ? 'bg-opacity-10'
-                              : 'hover:bg-gray-50'
-                          }`}
-                          style={
-                            isActive(subitem.href)
-                              ? { backgroundColor: 'var(--primary)', color: 'white' }
-                              : { color: 'var(--foreground)' }
-                          }
-                        >
-                          {subitem.label}
-                        </Link>
-                        {idx < item.submenu!.length - 1 && (
-                          <div className="h-px bg-gray-100 my-1"></div>
-                        )}
-                      </div>
+                    {item.label}
+                    <ChevronDownIcon
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                        openDropdown === item.label ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center navbar-link ${
+                      isActive(item.href) ? 'active' : ''
+                    }`}
+                    style={isActive(item.href) ? activeStyle : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+
+                {/* Dropdown panel */}
+                {item.submenu && openDropdown === item.label && (
+                  <div
+                    data-nav-item
+                    role="menu"
+                    className="absolute left-0 top-full mt-1 w-64 bg-white rounded-lg shadow-xl py-1.5 z-50"
+                    style={{ border: '1px solid var(--border)' }}
+                  >
+                    {item.submenu.map((subitem) => (
+                      <Link
+                        key={subitem.href}
+                        href={subitem.href}
+                        role="menuitem"
+                        className={`block px-4 py-2.5 text-sm font-medium transition-colors navbar-link ${
+                          isActive(subitem.href) ? 'active' : ''
+                        }`}
+                        style={isActive(subitem.href) ? activeStyle : undefined}
+                      >
+                        {subitem.label}
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -219,68 +188,66 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Side CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Desktop Right CTA */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
               href="/members-area"
-              className="text-sm font-medium transition navbar-link"
-              style={{ color: 'var(--primary)' }}
+              className="text-sm font-medium px-3 py-2 rounded-md transition-colors navbar-link"
             >
               Member Login
             </Link>
             <Link
               href="/membership"
-              className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90 navbar-cta"
+              className="px-4 py-2 text-sm font-semibold rounded-lg transition navbar-cta"
             >
               Join CAFAA
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
-            aria-label="Toggle menu"
+            className="lg:hidden p-2 rounded-lg transition"
+            style={{ color: 'var(--foreground)' }}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? (
-              <XMarkIcon className="w-6 h-6" />
-            ) : (
-              <Bars3Icon className="w-6 h-6" />
-            )}
+            {mobileMenuOpen
+              ? <XMarkIcon className="w-6 h-6" />
+              : <Bars3Icon className="w-6 h-6" />
+            }
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t pt-4 space-y-2">
+          <div className="lg:hidden mt-3 pb-4 border-t pt-3 space-y-1" style={{ borderColor: 'var(--border)' }}>
             {menuStructure.map((item) => (
               <div key={item.label}>
                 {item.submenu ? (
                   <>
                     <button
-                      onClick={() => toggleMobileItem(item.label)}
+                      onClick={() =>
+                        setExpandedMobileItems((prev) => ({
+                          ...prev,
+                          [item.label]: !prev[item.label],
+                        }))
+                      }
                       className={`w-full text-left px-4 py-2.5 text-sm font-medium rounded-lg transition-colors flex justify-between items-center navbar-link ${
                         isActive(item.href) ? 'active' : ''
                       }`}
-                      style={
-                        isActive(item.href)
-                          ? { backgroundColor: 'var(--primary)', color: 'white' }
-                          : { color: 'var(--foreground)' }
-                      }
-                      aria-expanded={expandedMobileItems[item.label] ? 'true' : 'false'}
+                      style={isActive(item.href) ? activeStyle : undefined}
+                      aria-expanded={expandedMobileItems[item.label] ?? false}
                     >
                       {item.label}
-                        <ChevronDownIcon
-                          className={`w-4 h-4 transition-transform ${
-                            expandedMobileItems[item.label] ? 'rotate-180' : ''
-                          }`}
-                        />
+                      <ChevronDownIcon
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          expandedMobileItems[item.label] ? 'rotate-180' : ''
+                        }`}
+                      />
                     </button>
-
-                    {/* Mobile Submenu */}
                     {expandedMobileItems[item.label] && (
-                      <div className="bg-gray-50 rounded-lg mt-1 py-2 px-2 space-y-1">
+                      <div className="ml-2 mt-1 rounded-lg py-1.5 space-y-0.5" style={{ background: 'var(--background)' }}>
                         {item.submenu.map((subitem) => (
                           <Link
                             key={subitem.href}
@@ -288,11 +255,7 @@ export default function Navbar() {
                             className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors navbar-link ${
                               isActive(subitem.href) ? 'active' : ''
                             }`}
-                            style={
-                              isActive(subitem.href)
-                                ? { backgroundColor: 'var(--primary)', color: 'white' }
-                                : { color: 'var(--foreground)' }
-                            }
+                            style={isActive(subitem.href) ? activeStyle : undefined}
                           >
                             {subitem.label}
                           </Link>
@@ -301,16 +264,13 @@ export default function Navbar() {
                     )}
                   </>
                 ) : (
+                  /* Plain link — no submenu */
                   <Link
                     href={item.href}
                     className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors navbar-link ${
                       isActive(item.href) ? 'active' : ''
                     }`}
-                    style={
-                      isActive(item.href)
-                        ? { backgroundColor: 'var(--primary)', color: 'white' }
-                        : { color: 'var(--foreground)' }
-                    }
+                    style={isActive(item.href) ? activeStyle : undefined}
                   >
                     {item.label}
                   </Link>
@@ -318,17 +278,16 @@ export default function Navbar() {
               </div>
             ))}
 
-            {/* Mobile CTA Buttons */}
-            <div className="border-t pt-4 mt-4 space-y-2">
+            <div className="border-t pt-3 mt-2 space-y-2" style={{ borderColor: 'var(--border)' }}>
               <Link
                 href="/members-area"
-                className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition text-center"
+                className="block px-4 py-2.5 text-sm font-medium rounded-lg text-center navbar-link"
               >
                 Member Login
               </Link>
               <Link
                 href="/membership"
-                className="block px-4 py-2 text-sm font-semibold text-white rounded-lg transition hover:opacity-90 text-center navbar-cta"
+                className="block px-4 py-2.5 text-sm font-semibold rounded-lg text-center navbar-cta"
               >
                 Join CAFAA
               </Link>
